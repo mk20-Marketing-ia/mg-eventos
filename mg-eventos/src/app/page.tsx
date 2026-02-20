@@ -16,7 +16,7 @@ const SyntheticHero = dynamic(() => import("@/components/ui/synthetic-hero"), {
 import { ValueProps } from "@/components/sections/ValueProps";
 import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
-import { CTASection } from "@/components/sections/CTASection";
+import { CallToAction } from "@/components/ui/call-to-action";
 import { Section } from "@/components/ui/Section";
 import { Heading } from "@/components/ui/Heading";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
@@ -143,20 +143,29 @@ export default function HomePage() {
         ]}
       />
 
-      {/* CTA WhatsApp */}
-      <CTASection
+      {/* 1 — CTA WhatsApp */}
+      <CallToAction
+        layout="card"
+        dark
+        badge="Contactar ahora"
         title="¡Mándanos un WhatsApp!"
-        description="Háblanos por WhatsApp y te asesoraremos para encontrar tu fiesta ideal"
-        ctaText="Háblanos"
-        ctaHref={WHATSAPP_URL}
-        secondaryTitle="Anima la fiesta con MG Eventos"
-        secondaryDescription="Habla con nosotros y te asesoraremos a la hora de elegir lo que puede animar mejor tu evento"
-        secondaryCtaText="¡Contáctanos!"
-        secondaryCtaHref="/contacto"
-        variant="gradient"
+        description="Háblanos por WhatsApp y te asesoraremos para encontrar la animación perfecta para tu evento"
+        primaryButton={{
+          text: "Háblanos por WhatsApp",
+          href: WHATSAPP_URL,
+          icon: "whatsapp",
+          variant: "whatsapp",
+          external: true,
+        }}
+        secondaryButton={{
+          text: "Ver nuestros servicios",
+          href: "#servicios",
+          icon: "arrow",
+          variant: "outline",
+        }}
       />
 
-      {/* Animador de bodas + Stats */}
+      {/* 2 — Animador de bodas + Stats */}
       <Section variant="white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
@@ -202,6 +211,26 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
+
+      {/* 3 — CTA Contacto */}
+      <CallToAction
+        layout="card"
+        badge="MG Eventos"
+        title="Anima la fiesta con MG Eventos"
+        description="Habla con nosotros y te asesoraremos a la hora de elegir lo que puede animar mejor tu evento"
+        primaryButton={{
+          text: "¡Contáctanos!",
+          href: "/contacto",
+          icon: "arrow",
+          variant: "primary",
+        }}
+        secondaryButton={{
+          text: "Llamar ahora",
+          href: "tel:+34600000000",
+          icon: "phone",
+          variant: "outline",
+        }}
+      />
     </>
   );
 }

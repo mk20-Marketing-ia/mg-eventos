@@ -1,8 +1,29 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { Heading } from "@/components/ui/Heading";
+import dynamic from "next/dynamic";
+import type { ServiceCardItem } from "@/components/ui/color-change-card";
+
+const ColorChangeCards = dynamic(
+  () => import("@/components/ui/color-change-card"),
+  { ssr: false }
+);
+
+// Mapa de imágenes de Pexels por slug/título de servicio
+const SERVICE_IMAGES: Record<string, string> = {
+  "/dj-para-eventos-en-galicia":
+    "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "/discotecas-moviles-en-galicia":
+    "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "/escenario-movil-para-eventos":
+    "https://images.pexels.com/photos/2747446/pexels-photo-2747446.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "/pantallas-led-para-eventos-en-galicia":
+    "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "/fotomaton-en-galicia":
+    "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+};
+
+const FALLBACK_IMAGE =
+  "https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=800";
 
 interface ServiceCardData {
   title: string;
@@ -18,15 +39,17 @@ interface ServicesGridProps {
   services: ServiceCardData[];
 }
 
-export function ServicesGrid({
-  title,
-  subtitle,
-  intro,
-  services,
-}: ServicesGridProps) {
+export function ServicesGrid({ title, subtitle, intro, services }: ServicesGridProps) {
+  const cardItems: ServiceCardItem[] = services.map((s) => ({
+    heading: s.title,
+    description: s.description,
+    href: s.href,
+    imgSrc: SERVICE_IMAGES[s.href] ?? FALLBACK_IMAGE,
+  }));
+
   return (
-    <Section variant="light">
-      <div className="text-center mb-12">
+    <Section variant="light" id="servicios">
+      <div className="text-center mb-10">
         <Heading as="h2" className="text-neutral-900">
           {title}
         </Heading>
@@ -42,35 +65,7 @@ export function ServicesGrid({
         )}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {services.map((service, index) => (
-          <Link
-            key={service.href}
-            href={service.href}
-            className="animate-slide-up opacity-0"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <Card className="h-full hover:border-secondary border border-transparent">
-              <div className="w-full aspect-[16/10] rounded-lg bg-neutral-200 mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <span className="text-neutral-400 text-sm font-body">
-                    {service.imageAlt}
-                  </span>
-                </div>
-              </div>
-              <h3 className="font-heading font-bold text-lg text-neutral-900 group-hover:text-secondary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-neutral-600 font-body text-sm leading-relaxed mt-2">
-                {service.description}
-              </p>
-              <span className="inline-flex items-center gap-1 text-secondary font-heading font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
-                Ver servicio <ArrowRight className="w-4 h-4" />
-              </span>
-            </Card>
-          </Link>
-        ))}
-      </div>
+      <ColorChangeCards services={cardItems} />
     </Section>
   );
 }
