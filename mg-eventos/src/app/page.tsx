@@ -5,14 +5,17 @@ import { WHATSAPP_URL } from "@/lib/constants";
 import dynamic from "next/dynamic";
 import { CollaboratorsSection } from "@/components/sections/CollaboratorsSection";
 
-const SyntheticHero = dynamic(() => import("@/components/ui/synthetic-hero"), {
-  ssr: false,
-  loading: () => (
-    <div className="min-h-screen bg-primary flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
-    </div>
-  ),
-});
+const ScrollExpandHero = dynamic(
+  () => import("@/components/ui/scroll-expansion-hero"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="min-h-screen bg-primary flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
+      </div>
+    ),
+  }
+);
 import { ValueProps } from "@/components/sections/ValueProps";
 import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -37,22 +40,52 @@ export default function HomePage() {
       <SchemaOrganization />
       <SchemaWebSite />
 
-      {/* Hero 3D — Shader animado */}
-      <SyntheticHero
+      {/* Hero — Video expansion scroll */}
+      <ScrollExpandHero
+        mediaType="video"
+        mediaSrc="/images/mg%20eventos%20video%20home.mp4"
+        posterSrc="/images/mg%20eventos%20imagen%20home.jpg"
+        bgImageSrc="/images/mg%20eventos%20imagen%20home.jpg"
         title="Hacemos que nadie se quede sentado"
-        description="Somos animadores de fiesta en Galicia con +10 años creando momentos únicos. DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos."
-        badgeText="DJ · Fotomatón · LED · Escenario"
-        badgeLabel="Galicia"
-        ctaButtons={[
-          { text: "Pedir presupuesto", href: "/contacto", primary: true },
-          { text: "Ver servicios", href: "#servicios" },
-        ]}
-        microDetails={[
-          "+10 años de experiencia",
-          "Bodas, fiestas y empresas",
-          "Galicia y norte de Portugal",
-        ]}
-      />
+        tagline="MG Eventos · Galicia"
+        scrollToExpand="Desliza para descubrir"
+        textBlend
+      >
+        {/* Contenido post-expansión */}
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs font-heading font-semibold tracking-widest uppercase mb-6">
+            DJ · Fotomatón · LED · Escenario
+          </span>
+          <p className="text-neutral-600 font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            Somos animadores de fiesta en Galicia con +10 años creando momentos únicos.
+            DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/contacto"
+              className="px-8 py-3.5 rounded-xl text-base font-heading font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-lg shadow-secondary/25 transition-all"
+            >
+              Pedir presupuesto
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3.5 rounded-xl text-base font-heading font-medium border-2 border-secondary/30 text-secondary hover:bg-secondary/5 transition-all"
+            >
+              Háblanos por WhatsApp
+            </a>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-neutral-400 font-body">
+            {["+10 años de experiencia", "Bodas, fiestas y empresas", "Galicia y norte de Portugal"].map((d) => (
+              <span key={d} className="flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-secondary/50" />
+                {d}
+              </span>
+            ))}
+          </div>
+        </div>
+      </ScrollExpandHero>
 
       {/* Colaboradores */}
       <CollaboratorsSection />
