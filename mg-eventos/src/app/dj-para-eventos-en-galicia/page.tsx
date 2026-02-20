@@ -1,17 +1,30 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Music, Speaker, Cake } from "lucide-react";
+import { Music, Speaker, Cake, Monitor, Camera, Zap, Star } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
-import { HeroSection } from "@/components/sections/HeroSection";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { ValueProps } from "@/components/sections/ValueProps";
 import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
-import { BudgetCTA } from "@/components/sections/BudgetCTA";
 import { WhyMGSection } from "@/components/sections/WhyMGSection";
-import { Section } from "@/components/ui/Section";
-import { Heading } from "@/components/ui/Heading";
-import { Badge } from "@/components/ui/Badge";
+import { CallToAction } from "@/components/ui/call-to-action";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { SchemaBreadcrumb } from "@/components/seo/SchemaBreadcrumb";
+import dynamic from "next/dynamic";
+import type { ServiceCardItem } from "@/components/ui/color-change-card";
+
+const SyntheticHero = dynamic(() => import("@/components/ui/synthetic-hero"), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-[72vh] bg-primary flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
+
+const ColorChangeCards = dynamic(
+  () => import("@/components/ui/color-change-card"),
+  { ssr: false }
+);
 
 export const metadata: Metadata = createMetadata({
   title: "DJ para eventos en Galicia — MG Eventos",
@@ -20,6 +33,27 @@ export const metadata: Metadata = createMetadata({
   slug: "/dj-para-eventos-en-galicia",
   ogImage: "/og/dj-eventos.jpg",
 });
+
+const serviciosRelacionados: ServiceCardItem[] = [
+  {
+    heading: "Disco móvil",
+    description: "La fiesta donde tú quieras. Sonido de alta calidad e iluminación espectacular.",
+    href: "/discotecas-moviles-en-galicia",
+    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+  {
+    heading: "Pantallas LED",
+    description: "Impacto visual en cualquier evento. Tamaños y configuraciones adaptadas.",
+    href: "/pantallas-led-para-eventos-en-galicia",
+    imgSrc: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+  {
+    heading: "Fotomatón",
+    description: "Diversión y recuerdos únicos. Atrezzo y galería digital incluidos.",
+    href: "/fotomaton-en-galicia",
+    imgSrc: "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+];
 
 export default function DJEventosPage() {
   return (
@@ -36,11 +70,22 @@ export default function DJEventosPage() {
         ]}
       />
 
-      <HeroSection
-        preTitle="¡Contrata un dj para tu evento!"
+      {/* Hero 3D compact */}
+      <SyntheticHero
+        compact
         title="DJ para eventos en Galicia"
-        paragraph="¿Buscas un DJ para eventos en Galicia? En MG Eventos te ofrecemos un servicio cercano y totalmente adaptado. Buscamos que cada evento en Galicia tenga la música adecuada, el ambiente perfecto y la energía que haga que tus invitados disfruten al máximo."
-        ctaPrimary={{ text: "¡Contáctanos!", href: "/contacto" }}
+        description="Música personalizada, sonido profesional e iluminación adaptada. Hacemos que tu evento suene exactamente como lo imaginaste."
+        badgeText="Servicio de DJ"
+        badgeLabel="MG Eventos"
+        ctaButtons={[
+          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
+        ]}
+        microDetails={[
+          "+10 años de experiencia",
+          "Música personalizada",
+          "Sonido e iluminación incluidos",
+        ]}
         breadcrumbs={[
           { name: "Inicio", href: "/" },
           { name: "DJ para eventos en Galicia", href: "/dj-para-eventos-en-galicia" },
@@ -79,52 +124,160 @@ export default function DJEventosPage() {
         listItems={[
           "Cenas de empresa",
           "Presentaciones corporativas",
-          "Congresos",
+          "Congresos y ferias",
+          "Team buildings",
         ]}
-        cta={{ text: "Hablemos", href: "/contacto" }}
-        stat={{ value: 10, prefix: "+", label: "Años de experiencia" }}
+        cta={{ text: "Hablemos de tu evento", href: "/contacto" }}
+        stats={[
+          { value: 10, prefix: "+", label: "Años de experiencia" },
+          { value: 1600, prefix: "+", label: "Eventos realizados" },
+          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
+        ]}
       />
 
-      <BudgetCTA
+      {/* CTA presupuesto — tarjeta oscura */}
+      <CallToAction
+        layout="card"
+        dark
+        badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu DJ de eventos en Galicia"
-        description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición un DJ para eventos en Galicia con la experiencia y la cercanía que necesitas. Te asesoramos sin compromiso, resolvemos todas tus dudas y te ayudamos a elegir el servicio que mejor encaje con tu fiesta, con las mejores condiciones y siempre al mejor precio."
-        ctaText="¡Pregúntanos!"
-        ctaHref="/contacto"
+        description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición un DJ para eventos en Galicia con la experiencia y la cercanía que necesitas. Te asesoramos sin compromiso y nos adaptamos a tu celebración."
+        primaryButton={{ text: "¡Pregúntanos!", href: "/contacto", icon: "arrow" }}
+        secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
-      <Section variant="light">
-        <Badge className="mb-4">Monta tu evento con un</Badge>
-        <Heading as="h2" className="text-neutral-900">
-          Ambiente profesional con música y equipos de calidad
-        </Heading>
-        <p className="text-neutral-600 font-body text-lg leading-relaxed mt-4 max-w-4xl">
-          En un evento corporativo, la imagen lo es todo. Por eso, además de un
-          DJ profesional en Galicia, contamos con{" "}
-          <Link
-            href="/pantallas-led-para-eventos-en-galicia"
-            className="text-secondary hover:underline font-semibold"
-          >
-            pantallas LED para eventos
-          </Link>{" "}
-          para reforzar la comunicación de tu marca, presentaciones o vídeos. Y
-          si buscas un toque más cercano y divertido para los asistentes, nuestro{" "}
-          <Link
-            href="/fotomaton-en-galicia"
-            className="text-secondary hover:underline font-semibold"
-          >
-            fotomatón para eventos
-          </Link>{" "}
-          es perfecto para crear recuerdos que quedarán ligados a tu empresa.
-        </p>
-        <p className="text-neutral-600 font-body text-lg leading-relaxed mt-4 max-w-4xl">
-          Unimos música, sonido, iluminación y recursos visuales en un servicio
-          completo que aporta la seriedad necesaria en lo profesional y el
-          entretenimiento que hace que tu evento sea recordado.
-        </p>
-      </Section>
+      {/* Sección enriquecida: Ambiente profesional */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[#1a1740] to-secondary py-20 md:py-28">
+        {/* Elementos decorativos de fondo */}
+        <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-secondary/10 -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-accent/10 translate-x-1/4 translate-y-1/4 blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Columna izquierda — texto */}
+            <div>
+              <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
+                Para eventos de empresa
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+                Ambiente profesional con música y equipos de calidad
+              </h2>
+              <p className="text-white/70 font-body text-lg leading-relaxed mb-4">
+                En un evento corporativo, la imagen lo es todo. Por eso, además de un
+                DJ profesional en Galicia, contamos con{" "}
+                <Link
+                  href="/pantallas-led-para-eventos-en-galicia"
+                  className="text-accent font-semibold hover:text-accent/80 underline underline-offset-2 transition-colors"
+                >
+                  pantallas LED para eventos
+                </Link>{" "}
+                para reforzar la comunicación de tu marca, presentaciones o vídeos.
+              </p>
+              <p className="text-white/70 font-body text-lg leading-relaxed">
+                Y si buscas un toque más cercano, nuestro{" "}
+                <Link
+                  href="/fotomaton-en-galicia"
+                  className="text-accent font-semibold hover:text-accent/80 underline underline-offset-2 transition-colors"
+                >
+                  fotomatón para eventos
+                </Link>{" "}
+                crea recuerdos que quedan ligados a tu empresa para siempre.
+              </p>
+
+              {/* Bullets de puntos clave */}
+              <div className="mt-8 flex flex-col gap-3">
+                {[
+                  "Unimos música, sonido e iluminación en un solo servicio",
+                  "Seriedad profesional con entretenimiento garantizado",
+                  "Adaptados a cada tipo de espacio y audiencia",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center">
+                      <Star className="w-2.5 h-2.5 text-accent" />
+                    </span>
+                    <span className="text-white/80 font-body text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Columna derecha — tarjetas de servicios complementarios */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Pantallas LED */}
+              <Link
+                href="/pantallas-led-para-eventos-en-galicia"
+                className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center mb-4">
+                    <Monitor className="w-5 h-5 text-secondary-light" />
+                  </div>
+                  <h3 className="font-heading font-bold text-white text-base mb-1">
+                    Pantallas LED
+                  </h3>
+                  <p className="text-white/50 text-sm font-body leading-snug">
+                    Impacto visual para tu evento. Proyecciones, marcas y logotipos en alta resolución.
+                  </p>
+                  <span className="inline-block mt-3 text-xs font-heading font-semibold text-secondary-light group-hover:translate-x-1 transition-transform">
+                    Ver servicio →
+                  </span>
+                </div>
+              </Link>
+
+              {/* Fotomatón */}
+              <Link
+                href="/fotomaton-en-galicia"
+                className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center mb-4">
+                    <Camera className="w-5 h-5 text-accent" />
+                  </div>
+                  <h3 className="font-heading font-bold text-white text-base mb-1">
+                    Fotomatón
+                  </h3>
+                  <p className="text-white/50 text-sm font-body leading-snug">
+                    Diversión y recuerdos para tus invitados. Galería digital incluida.
+                  </p>
+                  <span className="inline-block mt-3 text-xs font-heading font-semibold text-accent group-hover:translate-x-1 transition-transform">
+                    Ver servicio →
+                  </span>
+                </div>
+              </Link>
+
+              {/* Camión escenario — card que ocupa el ancho completo */}
+              <Link
+                href="/escenario-movil-para-eventos"
+                className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 sm:col-span-2"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative flex items-center gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-white/70" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-bold text-white text-base mb-0.5">
+                      Camión escenario
+                    </h3>
+                    <p className="text-white/50 text-sm font-body">
+                      Para verbenas y conciertos al aire libre. Estructura, sonido e iluminación profesional lista para montar.
+                    </p>
+                  </div>
+                  <span className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/50 group-hover:text-white/80 group-hover:translate-x-1 transition-all">
+                    Ver →
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ServiceDetailBlock
-        tag="Para empresas"
+        tag="Para cualquier tamaño"
         title="DJ para eventos pequeños en Galicia"
         paragraphs={[
           "Sea cual sea el evento de tu empresa, en MG Eventos te ofrecemos un DJ para eventos corporativos en Galicia capaz de adaptarse a cada ocasión. Sabemos que no es lo mismo animar una cena de equipo que acompañar un congreso con música ambiental o dinamizar una presentación de producto. Por eso trabajamos de manera flexible, siempre buscando que tu evento tenga la imagen profesional que merece.",
@@ -137,6 +290,26 @@ export default function DJEventosPage() {
         cta={{ text: "¡Contáctanos!", href: "/contacto" }}
         variant="white"
       />
+
+      {/* Servicios relacionados — dark card */}
+      <section className="bg-neutral-50 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="rounded-2xl bg-gradient-to-br from-primary via-primary-light to-secondary p-8 md:p-14 shadow-xl shadow-primary/20">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-heading font-semibold tracking-widest uppercase backdrop-blur-sm mb-4">
+                MG Eventos
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white">
+                Completa tu evento con más servicios
+              </h2>
+              <p className="text-white/60 font-body text-lg mt-3 max-w-xl mx-auto">
+                Combina el servicio de DJ con otras soluciones para crear una experiencia completa e inolvidable
+              </p>
+            </div>
+            <ColorChangeCards services={serviciosRelacionados} />
+          </div>
+        </div>
+      </section>
 
       <WhyMGSection
         subtitle="Servicio de DJ con experiencia y cercanía"

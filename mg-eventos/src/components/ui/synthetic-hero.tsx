@@ -121,6 +121,11 @@ const fragmentShader = `
   }
 `;
 
+interface BreadcrumbItem {
+  name: string;
+  href: string;
+}
+
 interface HeroProps {
   title: string;
   description: string;
@@ -128,6 +133,10 @@ interface HeroProps {
   badgeLabel?: string;
   ctaButtons?: Array<{ text: string; href?: string; primary?: boolean }>;
   microDetails?: Array<string>;
+  /** Reduce la altura a ~72vh — para páginas de servicio */
+  compact?: boolean;
+  /** Migas de pan — se muestran en la esquina superior izquierda */
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const SyntheticHero = ({
@@ -140,6 +149,8 @@ const SyntheticHero = ({
     { text: "Ver servicios", href: "#servicios" },
   ],
   microDetails = [],
+  compact = false,
+  breadcrumbs,
 }: HeroProps) => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const badgeWrapperRef = useRef<HTMLDivElement | null>(null);
@@ -219,7 +230,7 @@ const SyntheticHero = ({
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-center justify-center min-h-screen overflow-hidden"
+      className={`relative flex items-center justify-center overflow-hidden ${compact ? "min-h-[72vh]" : "min-h-screen"}`}
     >
       {/* Shader 3D background */}
       <div className="absolute inset-0 z-0">
@@ -234,6 +245,24 @@ const SyntheticHero = ({
 
       {/* Overlay sutil para mejorar legibilidad del texto */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-primary/30 via-transparent to-primary/50" />
+
+      {/* Breadcrumbs — esquina superior izquierda */}
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <nav className="absolute top-6 left-6 z-20 flex items-center gap-1.5 text-xs text-white/50">
+          {breadcrumbs.map((crumb, i) => (
+            <span key={crumb.href} className="flex items-center gap-1.5">
+              {i > 0 && <span>/</span>}
+              {i < breadcrumbs.length - 1 ? (
+                <a href={crumb.href} className="hover:text-white/90 transition-colors">
+                  {crumb.name}
+                </a>
+              ) : (
+                <span className="text-white/80">{crumb.name}</span>
+              )}
+            </span>
+          ))}
+        </nav>
+      )}
 
       {/* Contenido */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
