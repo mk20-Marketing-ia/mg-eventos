@@ -1,9 +1,11 @@
 import { Metadata } from "next";
-import { Sparkles, Heart, Music } from "lucide-react";
+import { Sparkles, Heart, Music, Check, MessageCircle, ArrowRight } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { CollaboratorsSection } from "@/components/sections/CollaboratorsSection";
+import { ParallaxScrollSecond } from "@/components/ui/parallax-scroll";
 
 const ScrollExpandHero = dynamic(
   () => import("@/components/ui/scroll-expansion-hero"),
@@ -17,7 +19,6 @@ const ScrollExpandHero = dynamic(
   }
 );
 import { ValueProps } from "@/components/sections/ValueProps";
-import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { Section } from "@/components/ui/Section";
@@ -114,23 +115,116 @@ export default function HomePage() {
         ]}
       />
 
-      {/* Sobre MG Eventos */}
-      <ServiceDetailBlock
-        title="Sobre MG Eventos"
-        paragraphs={[
-          "Cada evento tiene su propio carácter, y por eso no existe una fórmula única para animar un evento. Lo que sí hay es experiencia, intuición y muchas ganas de pasarlo bien. En MG Eventos sabemos que una buena fiesta no se improvisa: se construye con energía, ritmo y un toque personal que hace que todos se sientan parte de la fiesta.",
-        ]}
-        listItems={[
-          "Fiestas privadas",
-          "Bodas",
-          "Verbenas",
-          "Cumpleaños",
-          "Y el evento que tú quieras...",
-        ]}
-        cta={{ text: "¡Háblanos por WhatsApp!", href: WHATSAPP_URL }}
-        stat={{ value: 10, prefix: "+", label: "Años de experiencia" }}
-        variant="white"
-      />
+      {/* Sobre MG Eventos — layout split: texto + galería parallax */}
+      <section className="bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-center min-h-[40rem]">
+
+            {/* Columna izquierda — texto */}
+            <div className="py-16 lg:py-20 lg:pr-8">
+              <span className="inline-block text-secondary font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
+                Quiénes somos
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6">
+                Sobre MG Eventos
+              </h2>
+              <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8">
+                Cada evento tiene su propio carácter, y por eso no existe una
+                fórmula única para animarlo. Lo que sí hay es experiencia,
+                intuición y muchas ganas de pasarlo bien. En MG Eventos
+                sabemos que una buena fiesta no se improvisa: se construye con
+                energía, ritmo y un toque personal que hace que todos se
+                sientan parte de la fiesta.
+              </p>
+
+              {/* Lista de tipos de evento */}
+              <ul className="space-y-3 mb-10">
+                {[
+                  "Fiestas privadas",
+                  "Bodas",
+                  "Verbenas",
+                  "Cumpleaños",
+                  "Y el evento que tú quieras...",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-neutral-700 font-body"
+                  >
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-secondary" />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-white font-heading font-semibold text-sm hover:bg-secondary/90 shadow-md shadow-secondary/20 transition-all"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  ¡Háblanos por WhatsApp!
+                </a>
+                <a
+                  href="/contacto"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-secondary/20 text-secondary font-heading font-semibold text-sm hover:bg-secondary/5 transition-all"
+                >
+                  Ver servicios
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Columna derecha — galería parallax */}
+            <div className="hidden lg:block relative">
+              {/* Degradado superior para fundir con la sección */}
+              <div className="absolute top-0 left-0 right-0 h-24 z-10 bg-gradient-to-b from-white to-transparent pointer-events-none" />
+              {/* Degradado inferior */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 z-10 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+
+              <ParallaxScrollSecond
+                images={[
+                  "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+                ]}
+                className="h-[42rem]"
+              />
+            </div>
+
+            {/* Galería móvil — carrusel simple horizontal */}
+            <div className="lg:hidden pb-12 -mx-4 px-4">
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
+                {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <div
+                    key={n}
+                    className="flex-shrink-0 w-56 h-72 rounded-xl overflow-hidden snap-start"
+                  >
+                    <Image
+                      src={`/images/imagenes%20verticales%20para%20la%20home/${n}.jpg`}
+                      alt={`MG Eventos galería ${n}`}
+                      width={400}
+                      height={600}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Servicios */}
       <ServicesGrid
