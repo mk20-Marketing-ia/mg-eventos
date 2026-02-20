@@ -2,8 +2,17 @@ import { Metadata } from "next";
 import { Sparkles, Heart, Music } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
-import { HeroSection } from "@/components/sections/HeroSection";
+import dynamic from "next/dynamic";
 import { CollaboratorsSection } from "@/components/sections/CollaboratorsSection";
+
+const SyntheticHero = dynamic(() => import("@/components/ui/synthetic-hero"), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-screen bg-primary flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
 import { ValueProps } from "@/components/sections/ValueProps";
 import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -28,12 +37,21 @@ export default function HomePage() {
       <SchemaOrganization />
       <SchemaWebSite />
 
-      {/* Hero */}
-      <HeroSection
-        title="MG Eventos"
-        subtitle="Música para eventos en Galicia"
-        paragraph="En cada evento hay un momento en el que todo cobra vida. Ese instante en el que la gente se levanta, sonríe y empieza a disfrutar de verdad. Ahí es donde entramos nosotros. Somos animadores de fiesta en Galicia, y nuestra misión es una sola: hacer que nadie se quede sentado."
-        ctaPrimary={{ text: "¡Contáctanos!", href: "/contacto" }}
+      {/* Hero 3D — Shader animado */}
+      <SyntheticHero
+        title="Hacemos que nadie se quede sentado"
+        description="Somos animadores de fiesta en Galicia con +10 años creando momentos únicos. DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos."
+        badgeText="DJ · Fotomatón · LED · Escenario"
+        badgeLabel="Galicia"
+        ctaButtons={[
+          { text: "Pedir presupuesto", href: "/contacto", primary: true },
+          { text: "Ver servicios", href: "#servicios" },
+        ]}
+        microDetails={[
+          "+10 años de experiencia",
+          "Bodas, fiestas y empresas",
+          "Galicia y norte de Portugal",
+        ]}
       />
 
       {/* Colaboradores */}
