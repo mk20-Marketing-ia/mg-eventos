@@ -71,9 +71,8 @@ Añadir antes de `WhyMGSection` un bloque con 3-4 servicios relacionados.
 
 - [x] Home — completada
 - [x] DJ para eventos — completada
-- [ ] DJ para fiestas ← **SIGUIENTE**
-- [ ] DJ para fiestas
-- [ ] DJ para bodas
+- [x] DJ para fiestas — completada
+- [ ] DJ para bodas ← **SIGUIENTE**
 - [ ] Fotomatón
 - [ ] Pantallas LED
 - [ ] Discotecas móviles
