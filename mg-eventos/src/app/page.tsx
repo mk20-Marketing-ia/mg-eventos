@@ -52,38 +52,60 @@ export default function HomePage() {
         scrollToExpand="Desliza para descubrir"
         textBlend
       >
-        {/* Contenido post-expansión */}
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs font-heading font-semibold tracking-widest uppercase mb-6">
-            DJ · Fotomatón · LED · Escenario
-          </span>
-          <p className="text-neutral-600 font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-            Somos animadores de fiesta en Galicia con +10 años creando momentos únicos.
-            DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="/contacto"
-              className="px-8 py-3.5 rounded-xl text-base font-heading font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-lg shadow-secondary/25 transition-all"
-            >
-              Pedir presupuesto
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl text-base font-heading font-medium border-2 border-secondary/30 text-secondary hover:bg-secondary/5 transition-all"
-            >
-              Háblanos por WhatsApp
-            </a>
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-neutral-400 font-body">
-            {["+10 años de experiencia", "Bodas, fiestas y empresas", "Galicia y norte de Portugal"].map((d) => (
-              <span key={d} className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-secondary/50" />
-                {d}
+        {/* Contenido post-expansión — estilo morado con textos originales */}
+        <div className="relative rounded-3xl bg-gradient-to-br from-primary via-[#2d2875] to-secondary p-12 md:p-16 shadow-2xl overflow-hidden">
+          {/* Elementos decorativos de fondo */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary-light/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            {/* Badge original */}
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-heading font-bold tracking-[0.15em] uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                DJ · Fotomatón · LED · Escenario
               </span>
-            ))}
+            </div>
+
+            {/* Descripción original */}
+            <p className="text-white/90 font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+              Somos animadores de fiesta en Galicia con +10 años creando momentos únicos.
+              DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos.
+            </p>
+
+            {/* Botones CTA originales */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a
+                href="/contacto"
+                className="group relative px-10 py-4 rounded-xl text-base font-heading font-bold bg-secondary hover:bg-secondary/90 text-white shadow-xl shadow-secondary/30 transition-all overflow-hidden"
+              >
+                <span className="relative z-10">Pedir presupuesto</span>
+                {/* Efecto shine al hover */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-10 py-4 rounded-xl text-base font-heading font-bold border-2 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm transition-all"
+              >
+                Háblanos por WhatsApp
+              </a>
+            </div>
+
+            {/* Microdetalles originales */}
+            <div className="flex flex-wrap justify-center gap-8 text-sm text-white/70 font-body">
+              {[
+                { icon: "⚡", text: "+10 años de experiencia" },
+                { icon: "🎉", text: "Bodas, fiestas y empresas" },
+                { icon: "📍", text: "Galicia y norte de Portugal" },
+              ].map((d, i) => (
+                <div key={i} className="flex items-center gap-2.5">
+                  <span className="text-lg">{d.icon}</span>
+                  <span className="font-medium">{d.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </ScrollExpandHero>
