@@ -137,7 +137,7 @@ const ScrollExpandMedia = ({
       ref={sectionRef}
       className="transition-colors duration-700 ease-in-out overflow-x-hidden"
     >
-      <section className="relative flex flex-col items-center justify-start min-h-[100dvh] pt-[120px] md:pt-8">
+      <section className="relative flex flex-col items-center justify-start min-h-[100dvh]">
         <div className="relative w-full flex flex-col items-center min-h-[100dvh]">
           {/* Fondo que desaparece al expandir */}
           <motion.div
