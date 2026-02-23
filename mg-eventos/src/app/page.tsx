@@ -21,9 +21,8 @@ const ScrollExpandHero = dynamic(
 import { ValueProps } from "@/components/sections/ValueProps";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CallToAction } from "@/components/ui/call-to-action";
-import { Section } from "@/components/ui/Section";
-import { Heading } from "@/components/ui/Heading";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { Badge } from "@/components/ui/Badge";
 import { SchemaOrganization } from "@/components/seo/SchemaOrganization";
 import { SchemaWebSite } from "@/components/seo/SchemaWebSite";
 
@@ -313,52 +312,75 @@ export default function HomePage() {
         }}
       />
 
-      {/* 2 — Animador de bodas + Stats */}
-      <Section variant="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <Heading as="h2" className="text-neutral-900">
-              MG Eventos es tu Animador de bodas en Galicia
-            </Heading>
-            <p className="text-neutral-600 font-body text-lg leading-relaxed mt-6">
-              Las bodas son momentos únicos, y tener un animador profesional
-              marca la diferencia entre una fiesta bonita y una que se recuerda
-              toda la vida. Nuestro equipo sabe cuándo subir el ritmo, cuándo
-              dejar espacio a la emoción y cómo conseguir que todos, desde los
-              novios hasta los abuelos, se sientan parte del ambiente
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-heading font-bold text-xl text-neutral-900 mb-2">
-              Nuestra experiencia
-            </h3>
-            <p className="text-neutral-500 font-body mb-8">
-              +10 años animando eventos. En MG Eventos llevamos muchos años
-              ayudando a animar la fiesta
-            </p>
-            <div className="grid grid-cols-2 gap-8">
-              {[
-                { value: 1600, prefix: "+", label: "Eventos y fiestas" },
-                { value: 300, prefix: "+", label: "Bodas" },
-                { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-accent">
-                    <AnimatedCounter
-                      value={stat.value}
-                      prefix={stat.prefix}
-                    />
-                  </p>
-                  <p className="font-body text-sm uppercase tracking-wider text-neutral-500 mt-2">
-                    {stat.label}
+      {/* 2 — Animador de bodas + Stats (estilo Feature 21st) */}
+      <section className="w-full py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid border border-neutral-200 rounded-2xl p-8 md:p-12 lg:p-14 grid-cols-1 gap-10 items-center lg:grid-cols-2 bg-white shadow-sm">
+            {/* Columna izquierda — texto */}
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-4">
+                <div>
+                  <Badge variant="secondary" className="mb-4">
+                    Bodas
+                  </Badge>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl text-left font-heading font-bold text-neutral-900">
+                    MG Eventos es tu Animador de bodas en Galicia
+                  </h2>
+                  <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl text-left font-body">
+                    Las bodas son momentos únicos, y tener un animador profesional
+                    marca la diferencia entre una fiesta bonita y una que se recuerda
+                    toda la vida. Nuestro equipo sabe cuándo subir el ritmo, cuándo
+                    dejar espacio a la emoción y cómo conseguir que todos, desde los
+                    novios hasta los abuelos, se sientan parte del ambiente
                   </p>
                 </div>
-              ))}
+              </div>
+            </div>
+
+            {/* Columna derecha — UNA sola tarjeta: imagen arriba + stats abajo, sin huecos */}
+            <div className="w-full max-w-[520px] mx-auto lg:mx-0 rounded-xl overflow-hidden bg-neutral-50 shadow-sm">
+              {/* Cabecera imagen: 520×260 px — misma tarjeta, sin gap */}
+              <div
+                className="w-full h-[260px] flex-shrink-0 bg-neutral-200 flex items-center justify-center text-neutral-400 font-body text-sm"
+                style={{ minHeight: 260 }}
+              >
+                <span className="text-center px-4">520 × 260 px</span>
+              </div>
+              {/* Nuestra experiencia + stats — mismo bloque, mismo fondo */}
+              <div className="p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="font-heading font-bold text-xl text-neutral-900 mb-2">
+                  Nuestra experiencia
+                </h3>
+                <p className="text-neutral-500 font-body mb-6">
+                  +10 años animando eventos. En MG Eventos llevamos muchos años
+                  ayudando a animar la fiesta
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+                  {[
+                    { value: 1600, prefix: "+", label: "Eventos y fiestas" },
+                    { value: 300, prefix: "+", label: "Bodas" },
+                    { value: 2000, prefix: "+", label: "Clientes satisfechos" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <p className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-accent">
+                        <AnimatedCounter
+                          value={stat.value}
+                          prefix={stat.prefix}
+                        />
+                      </p>
+                      <p className="font-body text-xs uppercase tracking-wider text-neutral-500 mt-1">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* 3 — CTA Contacto */}
       <CallToAction
