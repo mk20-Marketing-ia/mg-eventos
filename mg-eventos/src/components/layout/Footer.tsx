@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import {
@@ -22,9 +23,19 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="text-lg font-heading font-extrabold text-white hover:text-accent transition-colors"
+              className="inline-flex items-center gap-3 hover:opacity-90 transition-opacity"
+              aria-label="MG Eventos - Ir a inicio"
             >
-              {SITE_NAME}
+              <Image
+                src="/images/Logo-mg-eventos.webp"
+                alt=""
+                width={140}
+                height={48}
+                className="h-10 w-auto md:h-11"
+              />
+              <span className="text-lg font-heading font-extrabold text-white">
+                {SITE_NAME}
+              </span>
             </Link>
             <p className="mt-3 text-neutral-400 font-body text-sm leading-relaxed">
               Animadores de fiesta en Galicia con más de 10 años de experiencia.

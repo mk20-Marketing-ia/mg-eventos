@@ -8,22 +8,22 @@ const ColorChangeCards = dynamic(
   { ssr: false }
 );
 
-// Mapa de imágenes de Pexels por slug/título de servicio
+// Imágenes locales por slug de servicio (carpeta mg eventos en galicia  servicios)
 const SERVICE_IMAGES: Record<string, string> = {
   "/dj-para-eventos-en-galicia":
-    "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   "/discotecas-moviles-en-galicia":
-    "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   "/escenario-movil-para-eventos":
-    "https://images.pexels.com/photos/2747446/pexels-photo-2747446.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20camion%20esenario.jpg",
   "/pantallas-led-para-eventos-en-galicia":
-    "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
   "/fotomaton-en-galicia":
-    "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
 };
 
 const FALLBACK_IMAGE =
-  "https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=800";
+  "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg";
 
 interface ServiceCardData {
   title: string;

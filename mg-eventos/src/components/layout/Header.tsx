@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -33,9 +34,20 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-heading font-extrabold text-white hover:text-accent transition-colors"
+              className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+              aria-label="MG Eventos - Ir a inicio"
             >
-              MG Eventos
+              <Image
+                src="/images/Logo-mg-eventos.webp"
+                alt=""
+                width={140}
+                height={48}
+                className="h-10 w-auto md:h-12"
+                priority
+              />
+              <span className="text-xl md:text-2xl font-heading font-extrabold text-white">
+                MG Eventos
+              </span>
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
