@@ -170,7 +170,7 @@ export default function PantallasLEDPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div>
+            <div className="text-center md:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Todo tipo de eventos
               </span>
@@ -198,7 +198,7 @@ export default function PantallasLEDPage() {
                 para crear una experiencia visual y sonora de primer nivel.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3">
+              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
                 {[
                   "Visibilidad perfecta para todos los asistentes",
                   "Presentaciones corporativas impactantes",
@@ -317,7 +317,7 @@ export default function PantallasLEDPage() {
             <div className="relative z-10 grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-2 md:p-12 lg:p-16">
 
               {/* Texto izquierda */}
-              <div className="flex flex-col items-start text-left text-white">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
                 <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
                   ¿Por qué MG Eventos?
                 </h2>
@@ -330,7 +330,7 @@ export default function PantallasLEDPage() {
               </div>
 
               {/* CTAs derecha */}
-              <div className="flex flex-col items-start md:items-center justify-center gap-4">
+              <div className="flex flex-col items-center md:items-center justify-center gap-4">
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href="/contacto"

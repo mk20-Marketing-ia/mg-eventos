@@ -78,7 +78,7 @@ export function ServiceDetailMarquee({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ── Columna izquierda — contenido ─────────── */}
-          <div>
+          <div className="text-center md:text-left">
             {tag && (
               <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-heading font-semibold text-xs uppercase tracking-[0.15em] mb-5">
                 {tag}
@@ -110,7 +110,7 @@ export function ServiceDetailMarquee({
 
             {/* Stats horizontales */}
             {stats.length > 0 && (
-              <div className="flex flex-wrap gap-8 mb-8 pt-6 border-t border-neutral-100">
+              <div className="flex flex-wrap justify-center md:justify-start gap-8 mb-8 pt-6 border-t border-neutral-100">
                 {stats.map((s) => (
                   <div key={s.label} className="text-center min-w-[80px]">
                     <p className="font-heading font-extrabold text-3xl md:text-4xl text-secondary leading-none">
@@ -127,13 +127,15 @@ export function ServiceDetailMarquee({
             {children}
 
             {cta && (
-              <a
-                href={cta.href}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-secondary text-white font-heading font-bold text-sm hover:bg-secondary/90 shadow-md shadow-secondary/20 transition-all group"
-              >
+              <div className="flex justify-center md:justify-start">
+                <a
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-secondary text-white font-heading font-bold text-sm hover:bg-secondary/90 shadow-md shadow-secondary/20 transition-all group"
+                >
                 {cta.text}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
+              </div>
             )}
           </div>
 

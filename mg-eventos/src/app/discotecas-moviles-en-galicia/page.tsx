@@ -169,7 +169,7 @@ export default function DiscoMovilPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div>
+            <div className="text-center md:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para cualquier fiesta
               </span>
@@ -197,7 +197,7 @@ export default function DiscoMovilPage() {
                 , todo pensado para que tu evento tenga justo lo que necesita.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3">
+              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
                 {[
                   "Montaje versátil para cualquier espacio",
                   "Iluminación que crea el ambiente perfecto",
@@ -309,7 +309,7 @@ export default function DiscoMovilPage() {
             <div className="pointer-events-none absolute -top-16 -left-16 w-64 h-64 rounded-full bg-accent/20 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-secondary/20 blur-3xl" />
             <div className="relative z-10 grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-2 md:p-12 lg:p-16">
-              <div className="flex flex-col items-start text-left text-white">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
                 <h2 className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight mb-3">
                   ¿Por qué MG Eventos?
                 </h2>
@@ -320,7 +320,7 @@ export default function DiscoMovilPage() {
                   En MG Eventos ofrecemos un servicio de discomóvil en Galicia pensado para que disfrutes sin preocupaciones. Nuestro equipo no solo lleva la música, también aporta la energía y la confianza de un profesional que sabe adaptarse a cada tipo de público y celebración.
                 </p>
               </div>
-              <div className="flex flex-col items-start md:items-center justify-center gap-6">
+              <div className="flex flex-col items-center md:items-center justify-center gap-6">
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
                   <a
                     href="/contacto"
