@@ -216,7 +216,7 @@ const ScrollExpandMedia = ({
               <div className="flex flex-col items-center text-center relative z-10 mt-4 transition-none">
                 {tagline && (
                   <p
-                    className="text-sm md:text-base font-heading font-semibold tracking-[0.2em] uppercase text-white/70"
+                    className="text-sm md:text-base font-heading font-semibold tracking-[0.2em] uppercase text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
                     style={{ transform: `translateX(-${textTranslateX}vw)` }}
                   >
                     {tagline}
@@ -224,7 +224,7 @@ const ScrollExpandMedia = ({
                 )}
                 {scrollToExpand && (
                   <p
-                    className="text-xs md:text-sm font-body text-white/50 mt-2"
+                    className="text-xs md:text-sm font-body text-white mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
                     style={{ transform: `translateX(${textTranslateX}vw)` }}
                   >
                     {scrollToExpand}

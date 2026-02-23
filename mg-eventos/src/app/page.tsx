@@ -4,7 +4,6 @@ import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { CollaboratorsSection } from "@/components/sections/CollaboratorsSection";
 import { ParallaxScrollSecond } from "@/components/ui/parallax-scroll";
 
 const ScrollExpandHero = dynamic(
@@ -18,9 +17,9 @@ const ScrollExpandHero = dynamic(
     ),
   }
 );
-import { ValueProps } from "@/components/sections/ValueProps";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CallToAction } from "@/components/ui/call-to-action";
+import { CtaCard } from "@/components/ui/cta-card";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Badge } from "@/components/ui/Badge";
 import { SchemaOrganization } from "@/components/seo/SchemaOrganization";
@@ -44,8 +43,8 @@ export default function HomePage() {
       <ScrollExpandHero
         mediaType="video"
         mediaSrc="/images/mg%20eventos%20video%20home.mp4"
-        posterSrc="/images/mg%20eventos%20imagen%20home.jpg"
-        bgImageSrc="/images/mg%20eventos%20imagen%20home.jpg"
+        posterSrc="/images/animacion-eventos-galicia%20(1).jpg"
+        bgImageSrc="/images/animacion-eventos-galicia%20(1).jpg"
         title="Hacemos que nadie se quede sentado"
         tagline="MG Eventos · Galicia"
         scrollToExpand="Desliza para descubrir"
@@ -53,9 +52,18 @@ export default function HomePage() {
       >
         {/* Contenido post-expansión — estilo morado con textos originales */}
         <div className="relative rounded-3xl bg-gradient-to-br from-primary via-[#2d2875] to-secondary p-12 md:p-16 shadow-2xl overflow-hidden">
-          {/* Elementos decorativos de fondo */}
+          {/* Halos de luz ambiente */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary-light/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Destellos de luz — simulan focos de escenario */}
+          <div className="absolute top-6 left-1/4 w-1 h-16 bg-white/10 rotate-[20deg] rounded-full blur-sm pointer-events-none" />
+          <div className="absolute top-6 left-1/4 w-0.5 h-24 bg-white/8 rotate-[15deg] rounded-full blur-[2px] pointer-events-none" />
+          <div className="absolute top-4 right-1/3 w-1 h-20 bg-white/10 -rotate-[25deg] rounded-full blur-sm pointer-events-none" />
+          <div className="absolute top-4 right-1/3 w-0.5 h-28 bg-white/7 -rotate-[20deg] rounded-full blur-[2px] pointer-events-none" />
+          {/* Partículas flotantes */}
+          <div className="absolute top-8 right-12 w-1.5 h-1.5 bg-white/30 rounded-full pointer-events-none animate-pulse" style={{ animationDuration: "3s" }} />
+          <div className="absolute top-16 left-16 w-1 h-1 bg-white/20 rounded-full pointer-events-none animate-pulse" style={{ animationDuration: "4.5s", animationDelay: "1s" }} />
+          <div className="absolute bottom-12 right-24 w-1 h-1 bg-white/20 rounded-full pointer-events-none animate-pulse" style={{ animationDuration: "5s", animationDelay: "2s" }} />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             {/* Badge original */}
@@ -108,32 +116,44 @@ export default function HomePage() {
         </div>
       </ScrollExpandHero>
 
-      {/* Colaboradores */}
-      <CollaboratorsSection />
-
-      {/* Tres pilares */}
-      <ValueProps
-        items={[
-          {
-            icon: Sparkles,
-            title: "Iluminación profesional",
-            description:
-              "Transforma cualquier espacio en el escenario perfecto. Iluminación y efectos dinámicos para la pista de baile",
-          },
-          {
-            icon: Heart,
-            title: "Evento inolvidable",
-            description:
-              "Creamos experiencias que dejan huella en la memoria de tus invitados, lo damos todo para que disfrutéis desde el principio hasta el último baile.",
-          },
-          {
-            icon: Music,
-            title: "Animación de eventos",
-            description:
-              "Sabemos conectar con el público, mantener el ritmo y llenar de vida cada celebración, desde bodas hasta verbenas y eventos corporativos",
-          },
-        ]}
-      />
+      {/* Tres pilares — fondo oscuro ambiente */}
+      <section className="relative overflow-hidden bg-primary py-16 md:py-20">
+        {/* Halos decorativos */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+            {[
+              {
+                icon: Sparkles,
+                title: "Iluminación profesional",
+                description:
+                  "Transforma cualquier espacio en el escenario perfecto. Iluminación y efectos dinámicos para la pista de baile.",
+              },
+              {
+                icon: Heart,
+                title: "Evento inolvidable",
+                description:
+                  "Creamos experiencias que dejan huella en la memoria de tus invitados. Lo damos todo desde el principio hasta el último baile.",
+              },
+              {
+                icon: Music,
+                title: "Animación de eventos",
+                description:
+                  "Sabemos conectar con el público, mantener el ritmo y llenar de vida cada celebración: bodas, verbenas y eventos corporativos.",
+              },
+            ].map(({ icon: Icon, title, description }, i) => (
+              <div key={title} className="text-center group" style={{ animationDelay: `${i * 0.15}s` }}>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 mb-5 group-hover:bg-white/20 transition-colors">
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-heading font-bold text-lg text-white mb-3">{title}</h3>
+                <p className="text-white/70 font-body text-sm leading-relaxed">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Sobre MG Eventos — layout split: texto + galería parallax */}
       <section className="bg-white overflow-hidden">
@@ -246,6 +266,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Frase de ambiente — CtaCard */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <CtaCard
+            imageSrc="/images/mg%20eventos%20imagen%20home.jpg"
+            title={
+              <>
+                Donde hay buena música{" "}
+                <span className="text-white/80">y buena gente,</span>
+                <br />
+                hay fiesta.
+              </>
+            }
+            description="Llevamos más de 10 años creando esos momentos en Galicia. DJ, fotomatón, pantallas LED y escenario para bodas, fiestas y eventos."
+            primaryCta={{ label: "Pedir presupuesto", href: "/contacto" }}
+            secondaryCta={{ label: "Háblanos por WhatsApp", href: WHATSAPP_URL }}
+          />
+        </div>
+      </section>
+
       {/* Servicios */}
       <ServicesGrid
         title="Servicios de MG Eventos"
@@ -342,11 +382,14 @@ export default function HomePage() {
             {/* Columna derecha — UNA sola tarjeta: imagen arriba + stats abajo, sin huecos */}
             <div className="w-full max-w-[520px] mx-auto lg:mx-0 rounded-xl overflow-hidden bg-neutral-50 shadow-sm">
               {/* Cabecera imagen: 520×260 px — misma tarjeta, sin gap */}
-              <div
-                className="w-full h-[260px] flex-shrink-0 bg-neutral-200 flex items-center justify-center text-neutral-400 font-body text-sm"
-                style={{ minHeight: 260 }}
-              >
-                <span className="text-center px-4">520 × 260 px</span>
+              <div className="w-full h-[260px] flex-shrink-0 relative overflow-hidden">
+                <Image
+                  src="/images/mg%20eventos%20en%20galicia%20.jpg"
+                  alt="MG Eventos en Galicia — equipo de animación en acción"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                />
               </div>
               {/* Nuestra experiencia + stats — mismo bloque, mismo fondo */}
               <div className="p-6 md:p-8 flex flex-col justify-center">
