@@ -34,10 +34,10 @@ export default function PoliticaDePrivacidadPage() {
             ]}
             className="mb-6 [&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/40 [&_svg]:text-white/30"
           />
-          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white">
+          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white text-center">
             Política de Privacidad
           </h1>
-          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl">
+          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl text-center text-justify">
             Información sobre el tratamiento de tus datos personales en
             mgeventos.es
           </p>
@@ -47,10 +47,10 @@ export default function PoliticaDePrivacidadPage() {
       <section className="bg-white py-12 md:py-16">
         <Container>
           <article className="max-w-3xl mx-auto">
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               1. Responsable del tratamiento
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Responsable del Tratamiento se corresponde con el del titular
               de este sitio web, cuyos datos completos figuran en el{" "}
               <Link
@@ -62,28 +62,28 @@ export default function PoliticaDePrivacidadPage() {
               .
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               2. Datos tratados, finalidades y plazos de conservación
             </h2>
 
-            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3">
+            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3 text-center">
               2.1 Datos tratados
             </h3>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               A los efectos de la solicitud de información, contacto, cita o la
               suscripción de nuestros boletines y newsletter, se deberán
               facilitar unos datos a través de la cumplimentación del formulario
               dispuesto a tal efecto, en el que se indicará cuáles de ellos
               tienen el carácter de obligatorio.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Durante la navegación obtenemos datos que nos aportan información
               sobre usabilidad y preferencias de los usuarios, según los
               términos y condiciones que se prevén expresamente en el apartado
               de cookies.
             </p>
 
-            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3">
+            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3 text-center">
               2.2 Finalidades
             </h3>
             <p className="font-body text-neutral-700 leading-relaxed mb-2">
@@ -106,10 +106,10 @@ export default function PoliticaDePrivacidadPage() {
               </li>
             </ul>
 
-            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3">
+            <h3 className="font-heading font-bold text-xl text-neutral-900 mt-8 mb-3 text-center">
               2.3 Conservación
             </h3>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El plazo de conservación será el siguiente: Los datos serán
               tratados, desde que el usuario preste su consentimiento hasta la
               retirada del mismo, el cual podrá otorgarse cuantas veces quiera.
@@ -117,33 +117,33 @@ export default function PoliticaDePrivacidadPage() {
               gratuito y accesible para gestionarlo.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               3. Legitimación del tratamiento
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               La base legal para el tratamiento de los datos facilitados será el
               consentimiento otorgado por el usuario mediante la cumplimentación
               del formulario y la satisfacción de los intereses legítimos del
               Responsable del Tratamiento.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               4. Destinatarios y cesiones
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               No se realizarán cesiones ni comunicaciones de datos, salvo las
               expresamente previstas por ley.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               No se encuentran previstas las transferencias internacionales de
               datos y los proveedores de servicios se encuentran en el Espacio
               Económico Europeo.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               5. Ejercicio de derechos
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Cualquier persona tiene derecho a obtener confirmación acerca de
               si se está procediendo al tratamiento de datos personales que les
               conciernan, o no. Las personas interesadas tienen derecho a
@@ -152,13 +152,13 @@ export default function PoliticaDePrivacidadPage() {
               supresión cuando, entre otros motivos, los datos ya no sean
               necesarios para los fines que fueron recogidos.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               En determinadas circunstancias, los interesados podrán solicitar la
               limitación del tratamiento de sus datos u oponerse al tratamiento
               de los mismos, en cuyo caso únicamente los conservaremos para el
               ejercicio o la defensa de reclamaciones.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Para ello, los usuarios podrán dirigir una comunicación por
               escrito a la dirección fiscal o dirección de correo electrónico
               que figuran en el{" "}
@@ -171,7 +171,7 @@ export default function PoliticaDePrivacidadPage() {
               , incluyendo en ambos casos una fotocopia del documento nacional
               de identidad o documentación acreditativa equivalente.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               En caso de que desee ejercer el derecho de portabilidad, se
               facilitará esos datos al nuevo Responsable.
             </p>

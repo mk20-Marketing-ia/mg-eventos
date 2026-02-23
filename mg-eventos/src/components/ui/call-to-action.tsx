@@ -101,11 +101,11 @@ export function CallToAction({
                 {badge}
               </span>
             )}
-            <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tight text-white text-balance">
+            <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tight text-white text-balance text-center">
               {title}
             </h2>
             {description && (
-              <p className="text-white/70 font-body text-lg leading-relaxed">
+              <p className="text-white/70 font-body text-lg leading-relaxed text-center text-justify">
                 {description}
               </p>
             )}
@@ -151,11 +151,11 @@ export function CallToAction({
             </span>
           )}
           <div className="flex flex-col gap-3 max-w-xl">
-            <h2 className={cn("text-3xl md:text-5xl font-heading font-bold tracking-tight text-balance", titleStyle)}>
+            <h2 className={cn("text-3xl md:text-5xl font-heading font-bold tracking-tight text-balance text-center", titleStyle)}>
               {title}
             </h2>
             {description && (
-              <p className={cn("text-lg font-body leading-relaxed", descStyle)}>
+              <p className={cn("text-lg font-body leading-relaxed text-center text-justify", descStyle)}>
                 {description}
               </p>
             )}

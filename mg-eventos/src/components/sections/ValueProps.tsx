@@ -28,7 +28,7 @@ export function ValueProps({ items, variant = "light" }: ValuePropsProps) {
             <h3 className="font-heading font-bold text-lg text-neutral-900 mb-3">
               {item.title}
             </h3>
-            <p className="text-neutral-600 font-body text-sm leading-relaxed">
+            <p className="text-neutral-600 font-body text-sm leading-relaxed text-center text-justify">
               {item.description}
             </p>
           </div>

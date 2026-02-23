@@ -236,7 +236,7 @@ const SyntheticHero = ({
   return (
     <section
       ref={sectionRef}
-      className={`relative flex items-center justify-center overflow-hidden py-12 md:py-8 ${compact ? "min-h-[72vh]" : "min-h-screen"}`}
+      className={`relative flex items-center justify-center overflow-hidden pt-[120px] pb-12 md:pt-8 md:pb-8 ${compact ? "min-h-[72vh]" : "min-h-screen"}`}
     >
       {/* Shader 3D background */}
       <div className="absolute inset-0 z-0">

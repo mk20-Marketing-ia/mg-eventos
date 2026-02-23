@@ -174,13 +174,13 @@ export default function PantallasLEDPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Todo tipo de eventos
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 Para cada espacio, la pantalla perfecta
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 Las pantallas LED modulares funcionan igual de bien en exteriores que en interiores. En una plaza de pueblo o en un campo de fiesta, su potencia asegura imagen nítida incluso de día.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
                 Combinamos las pantallas con nuestro{" "}
                 <Link
                   href="/fotomaton-en-galicia"
@@ -198,7 +198,7 @@ export default function PantallasLEDPage() {
                 para crear una experiencia visual y sonora de primer nivel.
               </p>
 
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Visibilidad perfecta para todos los asistentes",
                   "Presentaciones corporativas impactantes",
@@ -318,13 +318,13 @@ export default function PantallasLEDPage() {
 
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Pantallas LED con experiencia y cercanía
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   Nuestro objetivo es sencillo: que tu evento tenga el impacto visual que merece. En MG Eventos nos encargamos de todo el montaje técnico para que tú solo tengas que preocuparte de disfrutar del resultado.
                 </p>
               </div>

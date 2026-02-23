@@ -167,13 +167,13 @@ export default function FotomatonPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Tu gran día
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 El rincón favorito de tu boda
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 Cada boda es diferente, y por eso ofrecemos un espejo fotomatón que se adapta al estilo de tu celebración. Desde ambientes elegantes y románticos hasta fiestas modernas y desenfadadas, puede personalizarse para encajar con la decoración y la temática del evento.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
                 Si buscas completar la experiencia, combinamos el fotomatón con nuestro{" "}
                 <Link
                   href="/dj-para-bodas-en-galicia"
@@ -184,7 +184,7 @@ export default function FotomatonPage() {
                 para que música, fotos y diversión vayan de la mano durante toda la celebración.
               </p>
 
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Se adapta a cualquier decoración y estilo de boda",
                   "Operador incluido para ayudar a los invitados",
@@ -305,13 +305,13 @@ export default function FotomatonPage() {
             <div className="relative z-10 grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-2 md:p-12 lg:p-16">
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Fotomatón con experiencia y cercanía
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   En MG Eventos lo hemos visto una y otra vez: mientras la música suena y la fiesta avanza, el fotomatón se convierte en el lugar donde todos quieren estar. Nuestro equipo cuida cada detalle para que tú solo tengas que preocuparte de disfrutar.
                 </p>
               </div>

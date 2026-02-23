@@ -166,10 +166,10 @@ export default function DJEventosPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para eventos de empresa
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 Ambiente profesional con música y equipos de calidad
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 En un evento corporativo, la imagen lo es todo. Por eso, además de un
                 DJ profesional en Galicia, contamos con{" "}
                 <Link
@@ -180,7 +180,7 @@ export default function DJEventosPage() {
                 </Link>{" "}
                 para reforzar la comunicación de tu marca, presentaciones o vídeos.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
                 Y si buscas un toque más cercano, nuestro{" "}
                 <Link
                   href="/fotomaton-en-galicia"
@@ -192,7 +192,7 @@ export default function DJEventosPage() {
               </p>
 
               {/* Bullets de puntos clave */}
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Unimos música, sonido e iluminación en un solo servicio",
                   "Seriedad profesional con entretenimiento garantizado",
@@ -343,13 +343,13 @@ export default function DJEventosPage() {
 
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Servicio de DJ con experiencia y cercanía
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   En MG Eventos ofrecemos un servicio de DJ en Galicia pensado para que disfrutes sin preocupaciones. Nuestro equipo no solo lleva la música, también aporta la energía y la confianza de un profesional que sabe adaptarse a cada tipo de público y celebración.
                 </p>
               </div>

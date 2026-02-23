@@ -166,14 +166,14 @@ export function CtaSectionWithGallery({
               {tag}
             </ContainerAnimated>
           )}
-          <ContainerAnimated className="text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl font-heading">
+          <ContainerAnimated className="text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl font-heading text-center">
             {title}
           </ContainerAnimated>
-          <ContainerAnimated className="my-4 text-base text-neutral-600 md:my-6 md:text-lg font-body leading-relaxed">
+          <ContainerAnimated className="my-4 text-base text-neutral-600 md:my-6 md:text-lg font-body leading-relaxed text-center text-justify">
             {description}
           </ContainerAnimated>
           {listItems.length > 0 && (
-            <ContainerAnimated className="my-4 space-y-2 md:my-6">
+            <ContainerAnimated className="my-4 space-y-2 md:my-6 text-left">
               {listItems.map((item) => (
                 <div key={item} className="flex items-center gap-2 font-body text-neutral-700">
                   <span className="h-1.5 w-1.5 rounded-full bg-secondary" />

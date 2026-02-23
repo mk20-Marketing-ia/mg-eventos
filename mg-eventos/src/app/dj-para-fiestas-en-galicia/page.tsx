@@ -165,10 +165,10 @@ export default function DJFiestasPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para todo tipo de fiestas
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 La energía perfecta para cada fiesta
               </h2>
-              <p className="text-white/85 font-body text-lg leading-relaxed mb-4">
+              <p className="text-white/85 font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 Si buscas un montaje completo, ponemos a tu disposición nuestro{" "}
                 <Link
                   href="/escenario-movil-para-eventos"
@@ -178,7 +178,7 @@ export default function DJFiestasPage() {
                 </Link>
                 , perfecto para fiestas patronales, conciertos y grandes celebraciones.
               </p>
-              <p className="text-white/85 font-body text-lg leading-relaxed">
+              <p className="text-white/85 font-body text-lg leading-relaxed text-center text-justify">
                 Nuestras contrataciones incluyen mucho más que pinchar música: asesoramiento previo, montaje de sonido e iluminación,{" "}
                 <Link
                   href="/discotecas-moviles-en-galicia"
@@ -196,7 +196,7 @@ export default function DJFiestasPage() {
                 . Nos encargamos de los detalles técnicos para que tú solo disfrutes.
               </p>
 
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Música adaptada a tu público y estilo",
                   "Montaje y desmontaje incluidos en el servicio",
@@ -310,13 +310,13 @@ export default function DJFiestasPage() {
 
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Servicio de DJ con experiencia y cercanía
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   En MG Eventos ofrecemos un servicio de DJ en Galicia pensado para que disfrutes sin preocupaciones. Nuestro equipo no solo lleva la música, también aporta la energía y la confianza de un profesional que sabe adaptarse a cada tipo de público y celebración.
                 </p>
               </div>

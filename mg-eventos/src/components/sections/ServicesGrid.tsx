@@ -50,7 +50,7 @@ export function ServicesGrid({ title, subtitle, intro, services }: ServicesGridP
   return (
     <Section variant="light" id="servicios">
       <div className="text-center mb-10">
-        <Heading as="h2" className="text-neutral-900">
+        <Heading as="h2" className="text-neutral-900 text-center">
           {title}
         </Heading>
         {subtitle && (
@@ -59,7 +59,7 @@ export function ServicesGrid({ title, subtitle, intro, services }: ServicesGridP
           </p>
         )}
         {intro && (
-          <p className="text-neutral-600 font-body text-lg mt-4 max-w-2xl mx-auto">
+          <p className="text-neutral-600 font-body text-lg mt-4 max-w-2xl mx-auto text-center text-justify">
             {intro}
           </p>
         )}

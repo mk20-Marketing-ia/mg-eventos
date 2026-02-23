@@ -31,10 +31,10 @@ export default function PoliticaDeCookiesPage() {
             ]}
             className="mb-6 [&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/40 [&_svg]:text-white/30"
           />
-          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white">
+          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white text-center">
             Política de Cookies
           </h1>
-          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl">
+          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl text-center text-justify">
             Información sobre el uso de cookies en mgeventos.es
           </p>
         </Container>
@@ -43,7 +43,7 @@ export default function PoliticaDeCookiesPage() {
       <section className="bg-white py-12 md:py-16">
         <Container>
           <article className="max-w-3xl mx-auto">
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               De conformidad con la normativa española que regula el uso de
               cookies en relación a la prestación de servicios de la sociedad de
               la información, recogida en el apartado segundo del artículo 22
@@ -60,10 +60,10 @@ export default function PoliticaDeCookiesPage() {
               prestación de un servicio expresamente solicitado por el USUARIO.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               ¿Qué son las cookies?
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Las cookies son pequeños archivos de texto que se instalan en el
               navegador del ordenador del USUARIO para registrar su actividad
               enviando una identificación anónima que se almacena en el mismo,
@@ -79,7 +79,7 @@ export default function PoliticaDeCookiesPage() {
               personales.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               Tipos de cookies
             </h2>
             <ol className="list-decimal list-inside space-y-2 font-body text-neutral-700 mb-4">
@@ -153,10 +153,10 @@ export default function PoliticaDeCookiesPage() {
               </li>
             </ol>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               Tipos de cookies utilizadas por este sitio web
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               A continuación informamos del tipo de cookies propias o de
               servicios que nos prestan complementos de terceros, utilizadas para
               el buen funcionamiento de este sitio web. Esto nos permiten
@@ -167,7 +167,7 @@ export default function PoliticaDeCookiesPage() {
               prestar nuestros servicios de una manera más eficiente y
               personalizada.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               La utilización de las cookies ofrece ventajas en la prestación de
               servicios, puesto que, facilita al usuario la navegación y el
               acceso a los diferentes servicios que ofrece este sitio web;
@@ -194,17 +194,17 @@ export default function PoliticaDeCookiesPage() {
               </li>
             </ul>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               Deshabilitación de las cookies
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Como usuario en todo momento podrá acceder a la configuración de
               su navegador aceptando o rechazando todas las cookies, o bien
               seleccionar aquéllas cuya instalación admite y cuáles no, siguiendo
               uno de los siguientes procedimientos, que depende del navegador
               que utilice:
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Dado que cada navegador utiliza una manera diferente, la función
               ayuda de su navegador le indicará cómo hacerlo.
             </p>
@@ -254,7 +254,7 @@ export default function PoliticaDeCookiesPage() {
                 </Link>
               </li>
             </ul>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Todos los navegadores permiten cambiar la configuración de
               Cookies. Estos ajustes normalmente se encuentran en las
               &quot;opciones&quot; o &quot;Preferencias&quot; del menú de su
@@ -275,12 +275,12 @@ export default function PoliticaDeCookiesPage() {
               </li>
               <li>Safari: Preferencias → Seguridad.</li>
             </ul>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Recuerde que para poder eliminar todas las cookies, incluyendo las
               cookies de terceros, debe seguir los pasos que se indican en los
               enlaces anteriores.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               En el caso de la no aceptación de cookies se ejecutará un código
               de Analytics restringido e irreversible, que realiza un examen de
               navegación anónima y que consigue no recolectar datos de carácter

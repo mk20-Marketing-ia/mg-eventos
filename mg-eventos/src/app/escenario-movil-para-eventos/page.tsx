@@ -174,10 +174,10 @@ export default function EscenarioMovilPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Servicio completo
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 Sonido, imagen y escenario en un solo servicio
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 No se trata solo de tener un escenario: lo importante es que luzca y suene como debe. Por eso en nuestro alquiler incluimos equipos de sonido potentes y{" "}
                 <Link
                   href="/pantallas-led-para-eventos-en-galicia"
@@ -187,7 +187,7 @@ export default function EscenarioMovilPage() {
                 </Link>{" "}
                 adaptadas a cada evento.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
                 No tienes que coordinar a diferentes proveedores: el escenario, el sonido y las luces viajan juntos. Añade nuestro{" "}
                 <Link
                   href="/dj-para-fiestas-en-galicia"
@@ -198,7 +198,7 @@ export default function EscenarioMovilPage() {
                 y tendrás todo lo necesario para arrancar la fiesta desde el primer minuto.
               </p>
 
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Estructura, sonido y luces en un solo servicio",
                   "Sin necesidad de coordinar múltiples proveedores",
@@ -325,13 +325,13 @@ export default function EscenarioMovilPage() {
             <div className="relative z-10 grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-2 md:p-12 lg:p-16">
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Escenario móvil con experiencia y cercanía
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   En MG Eventos ofrecemos un servicio de escenario móvil en Galicia pensado para que organices sin preocupaciones. Nuestro equipo se encarga de todo el montaje técnico para que tú solo tengas que preocuparte de disfrutar del resultado.
                 </p>
               </div>

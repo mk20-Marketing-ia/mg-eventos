@@ -85,18 +85,18 @@ export function ServiceDetailMarquee({
               </span>
             )}
 
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-5">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-5 text-center">
               {title}
             </h2>
 
             {paragraphs.map((p, i) => (
-              <p key={i} className="text-neutral-600 font-body text-lg leading-relaxed mb-4">
+              <p key={i} className="text-neutral-600 font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 {p}
               </p>
             ))}
 
             {listItems && listItems.length > 0 && (
-              <ul className="mt-2 mb-8 space-y-2.5">
+              <ul className="mt-2 mb-8 space-y-2.5 text-left">
                 {listItems.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-neutral-700 font-body">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary/10 flex items-center justify-center">

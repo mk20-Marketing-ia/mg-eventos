@@ -171,10 +171,10 @@ export default function DJBodasPage() {
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Más allá de la música
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
                 La banda sonora perfecta para vuestro día
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
                 Además del DJ, completamos la experiencia de vuestra boda con servicios que crean momentos únicos.
                 Nuestro{" "}
                 <Link
@@ -185,7 +185,7 @@ export default function DJBodasPage() {
                 </Link>{" "}
                 ofrece a los invitados diversión y recuerdos que se llevan a casa.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
                 Y si queréis un impacto visual especial, las{" "}
                 <Link
                   href="/pantallas-led-para-eventos-en-galicia"
@@ -196,7 +196,7 @@ export default function DJBodasPage() {
                 permiten proyectar fotos, vídeos o mensajes durante el banquete y la fiesta, creando una atmósfera incomparable.
               </p>
 
-              <div className="mt-8 flex flex-col items-center md:items-stretch gap-3">
+              <div className="mt-8 flex flex-col gap-3 text-left">
                 {[
                   "Ceremonia, cóctel, banquete y fiesta — todo cubierto",
                   "Lista personalizada elaborada contigo paso a paso",
@@ -322,13 +322,13 @@ export default function DJBodasPage() {
 
               {/* Texto izquierda */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
-                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3 text-center">
                   ¿Por qué MG Eventos?
                 </h2>
-                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                <p className="text-accent font-heading font-semibold text-lg mb-5 text-center">
                   Tu DJ para tu día especial
                 </p>
-                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                <p className="text-white font-body text-lg leading-relaxed max-w-md text-center text-justify">
                   Nuestro objetivo es sencillo: que tengas un DJ de boda que entienda tu estilo, que se adapte al ambiente que deseas crear y que haga que tú y tus invitados viváis una celebración inolvidable.
                 </p>
               </div>

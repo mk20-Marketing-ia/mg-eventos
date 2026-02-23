@@ -40,10 +40,10 @@ export default function AvisoLegalPage() {
             ]}
             className="mb-6 [&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/40 [&_svg]:text-white/30"
           />
-          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white">
+          <h1 className="font-heading font-bold text-3xl md:text-4xl text-white text-center">
             Aviso Legal
           </h1>
-          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl">
+          <p className="text-neutral-300 font-body text-lg mt-4 max-w-2xl text-center text-justify">
             Condiciones de uso e identificación del prestador de mgeventos.es
           </p>
         </Container>
@@ -52,10 +52,10 @@ export default function AvisoLegalPage() {
       <section className="bg-white py-12 md:py-16">
         <Container>
           <article className="max-w-3xl mx-auto">
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               1. Identificación del prestador
             </h2>
-            <dl className="bg-neutral-50 rounded-lg p-6 space-y-2 font-body text-neutral-700">
+            <dl className="bg-neutral-50 rounded-lg p-6 space-y-2 font-body text-neutral-700 text-left">
               <div>
                 <dt className="font-heading font-semibold text-neutral-800 inline">
                   Titular fiscal:
@@ -100,10 +100,10 @@ export default function AvisoLegalPage() {
               </div>
             </dl>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               2. Objeto
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Las presentes condiciones regularán el uso que el Prestador pone a
               disposición de los usuarios de la Web, y con ellas se pretende dar
               cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de
@@ -112,13 +112,13 @@ export default function AvisoLegalPage() {
               sitio web respecto a cuáles son las condiciones de uso del sitio
               web.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               A través del sitio web, el Prestador facilita a los usuarios el
               acceso a diversos contenidos, servicios, información y datos (los
               «contenidos»), puestos a disposición de los usuarios por el
               Prestador o por terceros proveedores de servicios y contenidos.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Toda persona que acceda a este sitio web asume el papel de
               usuario, comprometiéndose a la observancia y cumplimiento
               riguroso de las disposiciones aquí dispuestas, así como a
@@ -127,14 +127,14 @@ export default function AvisoLegalPage() {
               aquí dispuestas, deberá abstenerse respecto al uso del presente
               sitio web.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Prestador se reserva el derecho a modificar cualquier tipo de
               información que pudiera aparecer en el sitio web, sin que exista
               obligación de preavisar o poner en conocimiento de los usuarios
               dichas modificaciones, entendiéndose como suficiente con la
               publicación en el sitio web del prestador.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               La utilización de determinados servicios implicará así mismo la
               aceptación, sin reserva alguna, de las Condiciones particulares que
               el Prestador pudiera establecer en cualquier momento con carácter
@@ -142,16 +142,16 @@ export default function AvisoLegalPage() {
               Condiciones Generales de Uso.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               3. Responsabilidad
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Prestador se exime de cualquier tipo de responsabilidad
               derivada de la información publicada en su sitio web, siempre que
               esta información haya sido manipulada o introducida por un tercero
               ajeno al mismo.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Desde el sitio web del Prestador es posible que se redirija a
               contenidos de terceros sitios web. Dado que el Prestador no puede
               controlar siempre los contenidos introducidos por los terceros en
@@ -163,7 +163,7 @@ export default function AvisoLegalPage() {
               redirección a dicho sitio web, poniendo en conocimiento de las
               autoridades competentes el contenido en cuestión.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Prestador no se hace responsable de la información y contenidos
               almacenados, a título enunciativo, pero no limitativo, en foros,
               chats, generadores de blogs, comentarios, redes sociales o
@@ -180,7 +180,7 @@ export default function AvisoLegalPage() {
               clasificación, se ruega lo notifique de forma inmediata al
               administrador del sitio web.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Este sitio web ha sido revisado y probado para que funcione
               correctamente. En principio, puede garantizarse el correcto
               funcionamiento los 365 días del año, 24 horas al día. No obstante,
@@ -189,7 +189,7 @@ export default function AvisoLegalPage() {
               catástrofes naturales, huelgas, o circunstancias semejantes que
               hagan imposible el acceso a la página web.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Si se detectase que ha existido un error en la introducción del
               precio de un artículo, con posterioridad a la recepción de un
               pedido, el prestador se pondrá en contacto con usted lo antes
@@ -202,10 +202,10 @@ export default function AvisoLegalPage() {
               procederá a dar curso al envío.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               4. Propiedad intelectual e industrial
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El sitio web, incluyendo a título enunciativo pero no limitativo su
               programación, edición, compilación y demás elementos necesarios
               para su funcionamiento, los diseños, logotipos, texto y/o
@@ -215,7 +215,7 @@ export default function AvisoLegalPage() {
               la normativa de propiedad intelectual e industrial, así como
               inscritos en los registros públicos correspondientes.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Independientemente de la finalidad para la que fueran destinados,
               la reproducción total o parcial, uso, explotación, distribución y
               comercialización, requiere en todo caso de la autorización escrita
@@ -224,7 +224,7 @@ export default function AvisoLegalPage() {
               incumplimiento grave de los derechos de propiedad intelectual o
               industrial del autor.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Los diseños, logotipos, texto y/o gráficos ajenos al prestador y que
               pudieran aparecer en el sitio web, pertenecen a sus respectivos
               propietarios, siendo ellos mismos responsables de cualquier
@@ -232,14 +232,14 @@ export default function AvisoLegalPage() {
               En todo caso, el Prestador cuenta con la autorización expresa y
               previa por parte de los mismos.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Prestador reconoce a favor de sus titulares los correspondientes
               derechos de propiedad industrial e intelectual, no implicando su
               sola mención o aparición en el sitio web la existencia de derechos
               o responsabilidad alguna del Prestador sobre los mismos, como
               tampoco respaldo, patrocinio o recomendación por parte del mismo.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Para realizar cualquier tipo de observación respecto a posibles
               incumplimientos de los derechos de propiedad intelectual o
               industrial, así como sobre cualquiera de los contenidos del sitio
@@ -249,10 +249,10 @@ export default function AvisoLegalPage() {
               Identificación del prestador.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               5. Condiciones de acceso y uso
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               En general, el acceso a la información de los distintos productos
               y servicios existentes en el sitio web, así como a su navegación
               será libre y gratuita, no exigiéndose por tanto a los Usuarios el
@@ -262,7 +262,7 @@ export default function AvisoLegalPage() {
               carácter previo la inclusión de datos en formularios o el
               pertinente registro.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Para hacer uso de los Servicios los menores de edad, deberán
               obtener previamente permiso y/o autorización de sus padres,
               tutores o representantes legales, quienes serán considerados
@@ -277,17 +277,17 @@ export default function AvisoLegalPage() {
               no resultan infalibles, son de especial utilidad para controlar y
               restringir los materiales a los que pueden acceder los menores.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Usuario se compromete a hacer un uso adecuado y lícito del
               sitio web así como de los contenidos, productos y servicios, de
               conformidad con la legislación aplicable en cada momento, las
               presentes Condiciones Generales de Uso del sitio web, la moral y
               buenas costumbres generalmente aceptadas y el orden público.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               El Usuario deberá abstenerse de:
             </p>
-            <ol className="list-decimal list-inside space-y-2 font-body text-neutral-700 mb-4">
+            <ol className="list-decimal list-inside space-y-2 font-body text-neutral-700 mb-4 text-left">
               <li>
                 Hacer un uso no autorizado o fraudulento del sitio web y/o de
                 los contenidos con fines o efectos ilícitos, prohibidos en las
@@ -368,25 +368,25 @@ export default function AvisoLegalPage() {
               </li>
             </ol>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               6. Modificación y terminación de servicios
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Si bien, en principio, la duración de este sitio es indeterminada,
               el Prestador se reserva el derecho a modificar, suspender o dar por
               terminada la prestación de sus servicios, en todo o en parte, en
               cualquier momento, y sin necesidad de preaviso a los Usuarios del
               mismo.
             </p>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Asimismo, el Prestador podrá modificar en cualquier momento las
               Condiciones de uso de este sitio web.
             </p>
 
-            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4">
+            <h2 className="font-heading font-bold text-2xl text-neutral-900 mt-10 mb-4 text-center">
               7. Legislación y jurisdicción aplicable
             </h2>
-            <p className="font-body text-neutral-700 leading-relaxed mb-4">
+            <p className="font-body text-neutral-700 leading-relaxed mb-4 text-center text-justify">
               Las presentes Condiciones Generales quedan sujetas al ordenamiento
               jurídico español, sometiendo cualquier controversia a los
               juzgados y tribunales correspondientes al municipio de
