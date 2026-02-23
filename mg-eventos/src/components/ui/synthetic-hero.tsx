@@ -137,6 +137,10 @@ interface HeroProps {
   compact?: boolean;
   /** Migas de pan — se muestran en la esquina superior izquierda */
   breadcrumbs?: BreadcrumbItem[];
+  /** Descripción y microDetails en blanco puro (text-white) */
+  textWhite?: boolean;
+  /** Botón primario en color acento (naranja/verde) para contraste con fondo morado */
+  primaryCtaAccent?: boolean;
 }
 
 const SyntheticHero = ({
@@ -151,6 +155,8 @@ const SyntheticHero = ({
   microDetails = [],
   compact = false,
   breadcrumbs,
+  textWhite = false,
+  primaryCtaAccent = false,
 }: HeroProps) => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const badgeWrapperRef = useRef<HTMLDivElement | null>(null);
@@ -287,7 +293,7 @@ const SyntheticHero = ({
 
         <p
           ref={paragraphRef}
-          className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body font-light"
+          className={textWhite ? "text-white text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body font-light" : "text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body font-light"}
         >
           {description}
         </p>
@@ -298,8 +304,11 @@ const SyntheticHero = ({
         >
           {ctaButtons.map((button, index) => {
             const isPrimary = button.primary ?? index === 0;
+            const primaryClasses = primaryCtaAccent
+              ? "px-8 py-3 rounded-xl text-base font-heading font-semibold bg-accent hover:bg-accent-light text-primary shadow-lg shadow-accent/25 transition-all cursor-pointer inline-flex items-center justify-center"
+              : "px-8 py-3 rounded-xl text-base font-heading font-semibold backdrop-blur-lg bg-secondary/90 hover:bg-secondary shadow-lg shadow-secondary/25 transition-all cursor-pointer text-white inline-flex items-center justify-center";
             const classes = isPrimary
-              ? "px-8 py-3 rounded-xl text-base font-heading font-semibold backdrop-blur-lg bg-secondary/90 hover:bg-secondary shadow-lg shadow-secondary/25 transition-all cursor-pointer text-white inline-flex items-center justify-center"
+              ? primaryClasses
               : "px-8 py-3 rounded-xl text-base font-heading font-medium border border-white/30 text-white hover:bg-white/10 backdrop-blur-lg transition-all cursor-pointer inline-flex items-center justify-center";
 
             if (button.href) {
@@ -321,7 +330,7 @@ const SyntheticHero = ({
         {microDetails.length > 0 && (
           <ul
             ref={microRef}
-            className="mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white/60"
+            className={textWhite ? "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white" : "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white/60"}
           >
             {microDetails.map((detail, index) => (
               <li key={index} className="flex items-center gap-2">

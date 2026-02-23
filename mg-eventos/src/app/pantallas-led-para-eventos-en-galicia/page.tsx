@@ -75,12 +75,14 @@ export default function PantallasLEDPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="Pantallas LED para eventos en Galicia"
         description="Imagen de alta calidad para cualquier celebración. Interior o exterior, bodas, conferencias, ferias y fiestas populares. Montaje y asistencia técnica incluidos."
         badgeText="Pantallas LED"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -134,11 +136,6 @@ export default function PantallasLEDPage() {
           "Asistencia técnica durante el evento",
         ]}
         cta={{ text: "Solicitar presupuesto", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1600, prefix: "+", label: "Eventos realizados" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -157,10 +154,11 @@ export default function PantallasLEDPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu montaje de pantallas LED"
         description="Tu evento merece una imagen a la altura. En MG Eventos te ofrecemos pantallas LED en Galicia con montaje profesional, asistencia técnica y opciones adaptadas a tus necesidades. Te asesoramos sin compromiso y elegimos el formato ideal para tu espacio."
-        primaryButton={{ text: "¡Contáctanos!", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 

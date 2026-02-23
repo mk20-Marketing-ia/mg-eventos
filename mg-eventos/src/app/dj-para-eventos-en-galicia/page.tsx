@@ -73,6 +73,7 @@ export default function DJEventosPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
         title="DJ para eventos en Galicia"
         description="Música personalizada, sonido profesional e iluminación adaptada. Hacemos que tu evento suene exactamente como lo imaginaste."
         badgeText="Servicio de DJ"
@@ -128,11 +129,6 @@ export default function DJEventosPage() {
           "Team buildings",
         ]}
         cta={{ text: "Hablemos de tu evento", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1600, prefix: "+", label: "Eventos realizados" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -151,10 +147,11 @@ export default function DJEventosPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu DJ de eventos en Galicia"
         description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición un DJ para eventos en Galicia con la experiencia y la cercanía que necesitas. Te asesoramos sin compromiso y nos adaptamos a tu celebración."
-        primaryButton={{ text: "¡Pregúntanos!", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 

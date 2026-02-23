@@ -75,12 +75,14 @@ export default function EscenarioMovilPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="Escenario móvil para eventos en Galicia"
         description="El camión escenario más versátil de Galicia. Se despliega en horas y convierte cualquier espacio en un escenario profesional listo para la música y el público."
         badgeText="Camión escenario"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -134,11 +136,6 @@ export default function EscenarioMovilPage() {
           "Celebraciones privadas de gran aforo",
         ]}
         cta={{ text: "Hablemos de tu evento", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1400, prefix: "+", label: "Eventos realizados" },
-          { value: 1750, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -157,10 +154,11 @@ export default function EscenarioMovilPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu camión escenario en Galicia"
         description="Organizar un evento es más sencillo cuando cuentas con el apoyo adecuado. Con nuestro camión escenario tendrás estructura, sonido, luces y montaje rápido en un solo servicio. Te asesoramos sin compromiso y buscamos la mejor configuración para tu evento."
-        primaryButton={{ text: "¡Pregúntanos!", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 

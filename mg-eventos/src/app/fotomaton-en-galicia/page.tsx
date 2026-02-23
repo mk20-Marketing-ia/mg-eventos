@@ -72,12 +72,14 @@ export default function FotomatonPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="Fotomatón en Galicia"
         description="Risas, atrezzo y recuerdos para todos tus invitados. El rincón donde todos quieren estar, desde los más pequeños hasta los más mayores."
         badgeText="Fotomatón"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -127,11 +129,6 @@ export default function FotomatonPage() {
           "Personalización con el estilo del evento",
         ]}
         cta={{ text: "Pregúntanos sin compromiso", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1600, prefix: "+", label: "Eventos con fotomatón" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -150,10 +147,11 @@ export default function FotomatonPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu espejo fotomatón"
         description="Tu boda o fiesta es un día único y merece detalles que lo hagan inolvidable. Con el fotomatón de MG Eventos, tus invitados tendrán un espacio para divertirse, reír y guardar recuerdos especiales. Nos adaptamos a tu estilo y cuidamos cada detalle."
-        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 

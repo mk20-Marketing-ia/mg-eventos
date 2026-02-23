@@ -4,7 +4,6 @@ import { Speaker, Tent, TreePine, Music2, Layers, Zap, ArrowRight, MessageCircle
 import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 import { ValueProps } from "@/components/sections/ValueProps";
-import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { SchemaBreadcrumb } from "@/components/seo/SchemaBreadcrumb";
@@ -76,12 +75,14 @@ export default function DiscoMovilPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="Discotecas móviles en Galicia"
         description="La experiencia de una sala de fiestas en cualquier lugar: jardines, plazas, fincas, salones. Sonido, iluminación y animación profesional donde tú lo necesites."
         badgeText="Discomóvil"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -135,11 +136,6 @@ export default function DiscoMovilPage() {
           "Compatible con DJ profesional",
         ]}
         cta={{ text: "¡Contáctanos!", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1600, prefix: "+", label: "Eventos realizados" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -158,10 +154,11 @@ export default function DiscoMovilPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para disco móvil para fiestas"
         description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición una discomóvil en Galicia con la experiencia y cercanía que necesitas. Te asesoramos sin compromiso y elegimos el montaje perfecto para tu fiesta."
-        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -280,23 +277,6 @@ export default function DiscoMovilPage() {
           </div>
         </div>
       </section>
-
-      <ServiceDetailBlock
-        tag="Beneficios"
-        title="¿Por qué alquilar una discomóvil?"
-        paragraphs={[
-          "Elegir una discomóvil para tu fiesta o boda no es solo una cuestión de comodidad, es una forma de asegurar que el evento salga redondo. Estos son algunos de los beneficios más importantes:",
-        ]}
-        listItems={[
-          "Montaje versátil en cualquier espacio",
-          "Iluminación que crea el ambiente perfecto",
-          "Potencia y calidad de sonido profesional",
-          "Encaja con cualquier tipo de evento",
-          "Equipo técnico incluido en el servicio",
-        ]}
-        cta={{ text: "¡Pregúntanos!", href: "/contacto" }}
-        variant="white"
-      />
 
       {/* Servicios relacionados — dark card */}
       <section className="bg-neutral-50 py-16 md:py-24">

@@ -7,7 +7,7 @@ interface CTAButton {
   text: string;
   href: string;
   icon?: CTAIcon;
-  variant?: "primary" | "outline" | "whatsapp";
+  variant?: "primary" | "outline" | "whatsapp" | "accent";
   external?: boolean;
 }
 
@@ -21,6 +21,8 @@ interface CallToActionProps {
   layout?: "card" | "full";
   /** Solo en layout="card": si true el interior tiene el degradado violeta oscuro */
   dark?: boolean;
+  /** Descripción en blanco puro (text-white) en layout card dark */
+  descriptionWhite?: boolean;
   className?: string;
 }
 
@@ -45,6 +47,8 @@ function CTAButtonEl({
   const styles: Record<string, string> = {
     primary:
       "bg-secondary text-white hover:bg-secondary-light shadow-md shadow-secondary/20 hover:shadow-lg hover:shadow-secondary/30 hover:-translate-y-0.5",
+    accent:
+      "bg-accent text-primary hover:bg-accent-light shadow-md shadow-accent/25 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5",
     // outline sobre fondo claro → borde violeta
     outline:
       "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white",
@@ -78,6 +82,7 @@ export function CallToAction({
   secondaryButton,
   layout = "card",
   dark = false,
+  descriptionWhite = false,
   className,
 }: CallToActionProps) {
   // ── FULL WIDTH ────────────────────────────────────────────────
@@ -132,7 +137,9 @@ export function CallToAction({
     : "bg-secondary/10 text-secondary";
 
   const titleStyle = dark ? "text-white" : "text-neutral-900";
-  const descStyle  = dark ? "text-white/70" : "text-neutral-500";
+  const descStyle = dark
+    ? (descriptionWhite ? "text-white" : "text-white/70")
+    : "text-neutral-500";
 
   return (
     <section className={cn("py-16 md:py-24 bg-neutral-50", className)}>

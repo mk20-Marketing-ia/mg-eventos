@@ -72,12 +72,14 @@ export default function DJBodasPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="DJ para bodas en Galicia"
         description="La música marca la emoción de cada momento de tu gran día. Con MG Eventos, un equipo cercano y con experiencia que se adapta completamente a tu estilo."
         badgeText="DJ para bodas"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -149,10 +151,11 @@ export default function DJBodasPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu DJ de boda en Galicia"
         description="Tu boda merece la mejor música y un ambiente único. En MG Eventos ponemos a tu disposición un DJ para bodas en Galicia con experiencia, cercanía y un servicio completo. Te asesoramos sin compromiso y nos adaptamos a tu estilo para que tu celebración sea recordada por todos."
-        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 

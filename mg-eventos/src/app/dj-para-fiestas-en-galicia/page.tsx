@@ -72,12 +72,14 @@ export default function DJFiestasPage() {
       {/* Hero 3D compact */}
       <SyntheticHero
         compact
+        textWhite
+        primaryCtaAccent
         title="DJ para fiestas en Galicia"
         description="Transformamos cualquier celebración en un momento único. Verbenas, cumpleaños, fiestas privadas — llevamos la música, el sonido y la energía."
         badgeText="DJ para fiestas"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
@@ -123,11 +125,6 @@ export default function DJFiestasPage() {
         ]}
         listItems={["Cumpleaños", "Aniversarios", "Comuniones", "Fiestas íntimas"]}
         cta={{ text: "Hablemos de tu fiesta", href: "/contacto" }}
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 1600, prefix: "+", label: "Fiestas animadas" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-        ]}
         marqueeImages={[
           "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
           "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
@@ -146,10 +143,11 @@ export default function DJFiestasPage() {
       <CallToAction
         layout="card"
         dark
+        descriptionWhite
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu fiesta con DJ en Galicia"
         description="¿Quieres que tu próxima celebración sea inolvidable? En MG Eventos ponemos a tu disposición un DJ para fiestas en Galicia con sonido, iluminación y animación adaptados a cada ocasión. Te asesoramos sin compromiso y diseñamos un plan a medida."
-        primaryButton={{ text: "¡Contáctanos!", href: "/contacto", icon: "arrow" }}
+        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "accent" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
