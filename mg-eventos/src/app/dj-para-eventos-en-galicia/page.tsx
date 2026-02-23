@@ -4,7 +4,7 @@ import { Music, Speaker, Cake, Monitor, Camera, Zap, Star, ArrowRight, MessageCi
 import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 import { ValueProps } from "@/components/sections/ValueProps";
-import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
+import { CtaSectionWithGallery } from "@/components/ui/cta-section-with-gallery";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { SchemaBreadcrumb } from "@/components/seo/SchemaBreadcrumb";
@@ -285,19 +285,23 @@ export default function DJEventosPage() {
         </div>
       </section>
 
-      <ServiceDetailBlock
+      <CtaSectionWithGallery
         tag="Para cualquier tamaño"
         title="DJ para eventos pequeños en Galicia"
-        paragraphs={[
-          "Sea cual sea el evento de tu empresa, en MG Eventos te ofrecemos un DJ para eventos corporativos en Galicia capaz de adaptarse a cada ocasión. Sabemos que no es lo mismo animar una cena de equipo que acompañar un congreso con música ambiental o dinamizar una presentación de producto. Por eso trabajamos de manera flexible, siempre buscando que tu evento tenga la imagen profesional que merece.",
-        ]}
+        description="Sea cual sea el evento de tu empresa, en MG Eventos te ofrecemos un DJ para eventos corporativos en Galicia capaz de adaptarse a cada ocasión. Sabemos que no es lo mismo animar una cena de equipo que acompañar un congreso con música ambiental o dinamizar una presentación de producto. Por eso trabajamos de manera flexible, siempre buscando que tu evento tenga la imagen profesional que merece."
         listItems={[
           "Cenas de empresa",
           "Presentaciones corporativas",
           "Congresos",
         ]}
-        cta={{ text: "¡Contáctanos!", href: "/contacto" }}
-        variant="white"
+        ctaText="Contáctanos"
+        ctaHref="/contacto"
+        images={[
+          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
+        ]}
       />
 
       {/* Servicios relacionados — dark card */}
