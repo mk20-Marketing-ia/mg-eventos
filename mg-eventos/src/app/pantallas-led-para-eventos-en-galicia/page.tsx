@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "DJ para eventos",
     description: "Imagen y sonido juntos. El combo perfecto para cualquier tipo de evento.",
     href: "/dj-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   },
   {
     heading: "Escenario móvil",
     description: "Estructura profesional para grandes eventos al aire libre en Galicia.",
     href: "/escenario-movil-para-eventos",
-    imgSrc: "https://images.pexels.com/photos/1647918/pexels-photo-1647918.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20camion%20esenario.jpg",
   },
   {
     heading: "Disco móvil",
     description: "Sonido e iluminación espectacular donde tú necesites.",
     href: "/discotecas-moviles-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   },
 ];
 
@@ -137,16 +137,14 @@ export default function PantallasLEDPage() {
         ]}
         cta={{ text: "Solicitar presupuesto", href: "/contacto" }}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/Pantallas%20LED/Alquiler%20de%20pantallas%20LED%20para%20eventos.jpg",
+          "/images/Pantallas%20LED/Pantallas%20LED%20con%20experiencia%20y%20cercan%C3%ADa.jpg",
+          "/images/Pantallas%20LED/Pantallas%20LED%20para%20eventos%20en%20Galicia.jpg",
+          "/images/Pantallas%20LED/Pantallas%20LED%20para%20eventos%20en%20coru%C3%B1a.jpg",
+          "/images/Pantallas%20LED/Pantallas%20LED%20para%20eventos%20en%20pontevedra.jpg",
+          "/images/Pantallas%20LED/Pantallas%20LED%20para%20eventos%20en%20santiago.jpg",
+          "/images/Pantallas%20LED/mg%20eventos%20Pantallas%20LED%20para%20eventos%20en%20galicia.jpg",
+          "/images/Pantallas%20LED/presupuesto%20para%20tu%20montaje%20de%20pantallas%20LED.jpg",
         ]}
       />
 
@@ -305,7 +303,7 @@ export default function PantallasLEDPage() {
             {/* Imagen de fondo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/animacion-eventos-galicia%20(1).jpg"
+              src="/images/mg%20eventos%20imagen%20home.jpg"
               alt=""
               className="absolute inset-0 h-full w-full object-cover object-center"
               aria-hidden="true"

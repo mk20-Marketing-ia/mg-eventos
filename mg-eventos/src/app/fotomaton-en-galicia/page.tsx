@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "DJ para bodas",
     description: "Música perfecta para cada momento de vuestro gran día. Lista personalizada.",
     href: "/dj-para-bodas-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg",
   },
   {
     heading: "Disco móvil",
     description: "La fiesta donde tú quieras. Sonido e iluminación espectacular incluidos.",
     href: "/discotecas-moviles-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   },
   {
     heading: "DJ para eventos",
     description: "Profesionalidad y adaptación para cualquier tipo de evento o celebración.",
     href: "/dj-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   },
 ];
 
@@ -130,16 +130,14 @@ export default function FotomatonPage() {
         ]}
         cta={{ text: "Pregúntanos sin compromiso", href: "/contacto" }}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/imagenes%20de%20fotomaton/Fotomat%C3%B3n%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20fotomaton/Fotomat%C3%B3n%20para%20eventos.jpg",
+          "/images/imagenes%20de%20fotomaton/fotomaton%20coru%C3%B1a.jpg",
+          "/images/imagenes%20de%20fotomaton/fotomaton%20galicia.jpg",
+          "/images/imagenes%20de%20fotomaton/fotomaton%20pontevedra.jpg",
+          "/images/imagenes%20de%20fotomaton/fotomaton%20santiago.jpg",
+          "/images/imagenes%20de%20fotomaton/mg%20eventos%20fotomaton%20galicia.jpg",
+          "/images/imagenes%20de%20fotomaton/presupuesto%20para%20tu%20espejo%20fotomat%C3%B3n.jpg",
         ]}
       />
 

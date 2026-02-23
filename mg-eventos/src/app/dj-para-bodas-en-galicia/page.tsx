@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "Fotomatón para bodas",
     description: "Risas y recuerdos para todos tus invitados. Atrezzo y galería digital incluidos.",
     href: "/fotomaton-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
   },
   {
     heading: "Pantallas LED",
     description: "Proyecta vuestros momentos en alta resolución. Impacto visual en el gran día.",
     href: "/pantallas-led-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
   },
   {
     heading: "DJ para fiestas",
     description: "Cuando la boda termina, la fiesta continúa. Verbenas y celebraciones privadas.",
     href: "/dj-para-fiestas-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   },
 ];
 
@@ -134,16 +134,14 @@ export default function DJBodasPage() {
           { value: 2000, prefix: "+", label: "Clientes satisfechos" },
         ]}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/%C2%BFQu%C3%A9%20incluye%20nuestro%20servicio%20de%20DJ%20para%20bodas.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/DJ%20de%20boda%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/La%20banda%20sonora%20perfecta.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/Tu%20DJ%20para%20tu%20d%C3%ADa%20especial.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/mg%20eventos%20dj%20para%20bodas%20coru%C3%B1a.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/mg%20eventos%20dj%20para%20bodas%20pontevedra.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/mg%20eventos%20dj%20para%20bodas%20santiago.jpg",
+          "/images/imagenes%20de%20dj%20para%20bodas/Completa%20vuestra%20boda%20con%20m%C3%A1s%20servicios.jpg",
         ]}
       />
 

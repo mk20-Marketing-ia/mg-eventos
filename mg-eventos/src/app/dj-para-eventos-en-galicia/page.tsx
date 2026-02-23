@@ -39,19 +39,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "Disco móvil",
     description: "La fiesta donde tú quieras. Sonido de alta calidad e iluminación espectacular.",
     href: "/discotecas-moviles-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   },
   {
     heading: "Pantallas LED",
     description: "Impacto visual en cualquier evento. Tamaños y configuraciones adaptadas.",
     href: "/pantallas-led-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
   },
   {
     heading: "Fotomatón",
     description: "Diversión y recuerdos únicos. Atrezzo y galería digital incluidos.",
     href: "/fotomaton-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
   },
 ];
 
@@ -131,16 +131,12 @@ export default function DJEventosPage() {
         ]}
         cta={{ text: "Hablemos de tu evento", href: "/contacto" }}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/DJ%20para%20eventos%20corporativos%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/mg%20eventos%20dj%20coorporativo%20en%20galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/mg%20eventos%20dj%20coorporativo%20en%20santiago.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/DJ%20de%20eventos%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/DJ%20para%20eventos%20peque%C3%B1os%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/Completa%20tu%20evento%20con%20m%C3%A1s%20servicios.jpg",
         ]}
       />
 
@@ -298,10 +294,10 @@ export default function DJEventosPage() {
         ctaText="Contáctanos"
         ctaHref="/contacto"
         images={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/DJ%20para%20eventos%20peque%C3%B1os%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/DJ%20para%20eventos%20corporativos%20en%20Galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/mg%20eventos%20dj%20coorporativo%20en%20galicia.jpg",
+          "/images/imagenes%20de%20dj%20para%20evento%20coorporativo/mg%20eventos%20dj%20coorporativo%20en%20santiago.jpg",
         ]}
       />
 

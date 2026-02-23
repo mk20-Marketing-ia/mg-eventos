@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "DJ para bodas",
     description: "El momento más especial merece la música perfecta. Asesoramiento y lista personalizada.",
     href: "/dj-para-bodas-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg",
   },
   {
     heading: "Disco móvil",
     description: "La fiesta donde tú quieras. Sonido de alta calidad e iluminación espectacular.",
     href: "/discotecas-moviles-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   },
   {
     heading: "Fotomatón",
     description: "Diversión y recuerdos únicos. Atrezzo y galería digital incluidos.",
     href: "/fotomaton-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
   },
 ];
 
@@ -295,7 +295,7 @@ export default function DJFiestasPage() {
             {/* Imagen de fondo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/animacion-eventos-galicia%20(1).jpg"
+              src="/images/mg%20eventos%20imagen%20home.jpg"
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
               aria-hidden="true"

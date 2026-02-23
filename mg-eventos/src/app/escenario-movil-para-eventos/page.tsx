@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "Pantallas LED",
     description: "Impacto visual de alto nivel para complementar el escenario en cualquier evento.",
     href: "/pantallas-led-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
   },
   {
     heading: "Disco móvil",
     description: "La discomóvil perfecta para combinar con el camión escenario en verbenas y fiestas.",
     href: "/discotecas-moviles-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
   },
   {
     heading: "DJ para eventos",
     description: "El profesional que le da vida al escenario. Música, animación y energía garantizadas.",
     href: "/dj-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   },
 ];
 
@@ -137,16 +137,14 @@ export default function EscenarioMovilPage() {
         ]}
         cta={{ text: "Hablemos de tu evento", href: "/contacto" }}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/Escenario%20m%C3%B3vil/Cami%C3%B3n%20escenario%20en%20Galicia.jpg",
+          "/images/Escenario%20m%C3%B3vil/Escenario%20m%C3%B3vil%20con%20experiencia%20y%20cercan%C3%ADa.jpg",
+          "/images/Escenario%20m%C3%B3vil/Escenario%20m%C3%B3vil%20para%20eventos%20en%20Galicia.jpg",
+          "/images/Escenario%20m%C3%B3vil/Escenario%20m%C3%B3vil%20para%20eventos%20en%20coru%C3%B1a.jpg",
+          "/images/Escenario%20m%C3%B3vil/Escenario%20m%C3%B3vil%20para%20eventos%20en%20santiago.jpg",
+          "/images/Escenario%20m%C3%B3vil/Solicita%20presupuesto%20para%20tu%20cami%C3%B3n%20escenario%20en%20Galicia.jpg",
+          "/images/Escenario%20m%C3%B3vil/Tu%20evento%20necesita%20un%20cami%C3%B3n%20escenario.jpg",
+          "/images/Escenario%20m%C3%B3vil/mg%20eventos%20Escenario%20m%C3%B3vil%20para%20eventos%20en%20galicia.jpg",
         ]}
       />
 

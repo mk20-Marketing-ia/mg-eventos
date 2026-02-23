@@ -38,19 +38,19 @@ const serviciosRelacionados: ServiceCardItem[] = [
     heading: "DJ para eventos",
     description: "Profesionalidad y adaptación para cualquier tipo de evento o celebración.",
     href: "/dj-para-eventos-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
   },
   {
     heading: "Escenario móvil",
     description: "Estructura completa para verbenas y conciertos al aire libre en Galicia.",
     href: "/escenario-movil-para-eventos",
-    imgSrc: "https://images.pexels.com/photos/1647918/pexels-photo-1647918.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20camion%20esenario.jpg",
   },
   {
     heading: "Fotomatón",
     description: "Diversión y recuerdos para todos tus invitados. Atrezzo incluido.",
     href: "/fotomaton-en-galicia",
-    imgSrc: "https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
   },
 ];
 
@@ -137,16 +137,13 @@ export default function DiscoMovilPage() {
         ]}
         cta={{ text: "¡Contáctanos!", href: "/contacto" }}
         marqueeImages={[
-          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
-          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Discom%C3%B3vil%20para%20bodas.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Discotecas%20m%C3%B3viles%20en%20Galicia.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Discotecas%20m%C3%B3viles%20en%20coru%C3%B1a.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Discotecas%20m%C3%B3viles%20en%20santiago.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Discom%C3%B3vil%20con%20experiencia%20y%20cercan%C3%ADa.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/Solicita%20presupuesto%20para%20disco%20m%C3%B3vil%20para%20fiestas.jpg",
+          "/images/Discotecas%20m%C3%B3viles%20en%20Galicia/mg%20eventos%20Discotecas%20m%C3%B3viles%20en%20galicia.jpg",
         ]}
       />
 
@@ -302,7 +299,7 @@ export default function DiscoMovilPage() {
         <div className="container mx-auto px-4">
           <div className="relative w-full overflow-hidden rounded-2xl shadow-xl min-h-[320px]">
             <img
-              src="/images/animacion-eventos-galicia%20(1).jpg"
+              src="/images/mg%20eventos%20imagen%20home.jpg"
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
               aria-hidden="true"
