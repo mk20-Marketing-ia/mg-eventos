@@ -1,0 +1,5 @@
+# Seguridad: excluir del repositorio
+/.cursor/
+/docs/
+/PRPs/
+/*.md
