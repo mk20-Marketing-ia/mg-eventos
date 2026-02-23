@@ -77,7 +77,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
               <a
                 href="/contacto"
-                className="group relative px-10 py-4 rounded-xl text-base font-heading font-bold bg-secondary hover:bg-secondary/90 text-white shadow-xl shadow-secondary/30 transition-all overflow-hidden"
+                className="group relative px-10 py-4 rounded-xl text-base font-heading font-bold bg-green-500 hover:bg-green-600 text-white shadow-xl shadow-green-500/30 transition-all overflow-hidden"
               >
                 <span className="relative z-10">Pedir presupuesto</span>
                 {/* Efecto shine al hover */}
@@ -93,17 +93,16 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Microdetalles originales */}
-            <div className="flex flex-wrap justify-center gap-8 text-sm text-white/70 font-body">
+            {/* Microdetalles originales — blanco, sin emojis */}
+            <div className="flex flex-wrap justify-center gap-8 text-sm text-white font-body">
               {[
-                { icon: "⚡", text: "+10 años de experiencia" },
-                { icon: "🎉", text: "Bodas, fiestas y empresas" },
-                { icon: "📍", text: "Galicia y norte de Portugal" },
-              ].map((d, i) => (
-                <div key={i} className="flex items-center gap-2.5">
-                  <span className="text-lg">{d.icon}</span>
-                  <span className="font-medium">{d.text}</span>
-                </div>
+                "+10 años de experiencia",
+                "Bodas, fiestas y empresas",
+                "Galicia y norte de Portugal",
+              ].map((text) => (
+                <span key={text} className="font-medium">
+                  {text}
+                </span>
               ))}
             </div>
           </div>

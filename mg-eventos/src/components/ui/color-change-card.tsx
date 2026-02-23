@@ -60,7 +60,7 @@ const ServiceCard = ({ heading, description, imgSrc, href }: ServiceCardProps) =
       <motion.div
         transition={{ staggerChildren: 0.035 }}
         whileHover="hover"
-        className="group relative h-64 w-full cursor-pointer overflow-hidden bg-slate-300"
+        className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-2xl bg-slate-300"
       >
         {/* Imagen de fondo */}
         <div
