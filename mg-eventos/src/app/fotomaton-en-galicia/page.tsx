@@ -1,12 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Camera, ImageIcon, Users, Heart, Music, Smile, Star } from "lucide-react";
+import { Camera, ImageIcon, Users, Heart, Music, Smile, Star, ArrowRight, MessageCircle } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 import { ValueProps } from "@/components/sections/ValueProps";
-import { ServiceDetailBlock } from "@/components/sections/ServiceDetailBlock";
-import { WhyMGSection } from "@/components/sections/WhyMGSection";
 import { CallToAction } from "@/components/ui/call-to-action";
+import { ServiceDetailMarquee } from "@/components/ui/service-detail-marquee";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { SchemaBreadcrumb } from "@/components/seo/SchemaBreadcrumb";
 import dynamic from "next/dynamic";
@@ -115,7 +114,7 @@ export default function FotomatonPage() {
         ]}
       />
 
-      <ServiceDetailBlock
+      <ServiceDetailMarquee
         tag="Para fiestas"
         title="Fotomatón para eventos"
         paragraphs={[
@@ -132,6 +131,18 @@ export default function FotomatonPage() {
           { value: 10, prefix: "+", label: "Años de experiencia" },
           { value: 1600, prefix: "+", label: "Eventos con fotomatón" },
           { value: 2000, prefix: "+", label: "Clientes satisfechos" },
+        ]}
+        marqueeImages={[
+          "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/3.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/4.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/5.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/6.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/7.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
+          "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
         ]}
       />
 
@@ -163,10 +174,10 @@ export default function FotomatonPage() {
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
                 El rincón favorito de tu boda
               </h2>
-              <p className="text-white/70 font-body text-lg leading-relaxed mb-4">
+              <p className="text-white font-body text-lg leading-relaxed mb-4">
                 Cada boda es diferente, y por eso ofrecemos un espejo fotomatón que se adapta al estilo de tu celebración. Desde ambientes elegantes y románticos hasta fiestas modernas y desenfadadas, puede personalizarse para encajar con la decoración y la temática del evento.
               </p>
-              <p className="text-white/70 font-body text-lg leading-relaxed">
+              <p className="text-white font-body text-lg leading-relaxed">
                 Si buscas completar la experiencia, combinamos el fotomatón con nuestro{" "}
                 <Link
                   href="/dj-para-bodas-en-galicia"
@@ -184,10 +195,10 @@ export default function FotomatonPage() {
                   "Impresión instantánea y galería digital en tiempo real",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center">
+                    <span className="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-accent/30 border border-accent/50 flex items-center justify-center">
                       <Star className="w-2.5 h-2.5 text-accent" />
                     </span>
-                    <span className="text-white/80 font-body text-sm">{item}</span>
+                    <span className="text-white font-body text-sm">{item}</span>
                   </div>
                 ))}
               </div>
@@ -198,59 +209,59 @@ export default function FotomatonPage() {
               {/* Bodas */}
               <Link
                 href="/dj-para-bodas-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center mb-4">
-                    <Heart className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
+                    <Heart className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="font-heading font-bold text-white text-base mb-1">
                     Fotomatón para bodas
                   </h3>
-                  <p className="text-white/50 text-sm font-body leading-snug">
+                  <p className="text-white/80 text-sm font-body leading-snug">
                     El complemento perfecto para el gran día. Recuerdos para siempre.
                   </p>
-                  <span className="inline-block mt-3 text-xs font-heading font-semibold text-accent group-hover:translate-x-1 transition-transform">
+                  <span className="inline-block mt-3 text-xs font-heading font-semibold text-white/90 group-hover:translate-x-1 transition-transform">
                     Ver DJ bodas →
                   </span>
                 </div>
               </Link>
 
               {/* Fiestas */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center mb-4">
-                    <Smile className="w-5 h-5 text-violet-300" />
+                  <div className="w-10 h-10 rounded-xl bg-secondary-light/30 border border-white/20 flex items-center justify-center mb-4">
+                    <Smile className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="font-heading font-bold text-white text-base mb-1">
                     Fiestas y cumpleaños
                   </h3>
-                  <p className="text-white/50 text-sm font-body leading-snug">
+                  <p className="text-white/80 text-sm font-body leading-snug">
                     Desde los 7 hasta los 77 años. Todos quieren una foto en el fotomatón.
                   </p>
                 </div>
               </div>
 
               {/* Combo DJ + Fotomatón — ocupa ancho completo */}
-              <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 sm:col-span-2">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-light/10 to-transparent" />
+              <div className="relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 sm:col-span-2">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent" />
                 <div className="relative flex items-center gap-5">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                    <Music className="w-6 h-6 text-white/70" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/15 border border-white/30 flex items-center justify-center">
+                    <Music className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-heading font-bold text-white text-base mb-1">
                       Combo DJ + Fotomatón
                     </h3>
-                    <p className="text-white/50 text-sm font-body">
+                    <p className="text-white/80 text-sm font-body">
                       Contrata ambos servicios juntos y consigue la experiencia completa para tu celebración al mejor precio.
                     </p>
                   </div>
                   <Link
                     href="/contacto"
-                    className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/50 hover:text-white/80 hover:translate-x-1 transition-all"
+                    className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 hover:text-white hover:translate-x-1 transition-all"
                   >
                     Consultar →
                   </Link>
@@ -281,15 +292,57 @@ export default function FotomatonPage() {
         </div>
       </section>
 
-      <WhyMGSection
-        subtitle="Fotomatón con experiencia y cercanía"
-        description="En MG Eventos lo hemos visto una y otra vez: mientras la música suena y la fiesta avanza, el fotomatón se convierte en el lugar donde todos quieren estar. Nuestro equipo cuida cada detalle para que tú solo tengas que preocuparte de disfrutar."
-        stats={[
-          { value: 10, prefix: "+", label: "Años de experiencia" },
-          { value: 2000, prefix: "+", label: "Clientes satisfechos" },
-          { value: 1600, prefix: "+", label: "Eventos y fiestas" },
-        ]}
-      />
+      {/* ¿Por qué MG Eventos? — estilo CtaCard */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-xl min-h-[320px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/mg%20eventos%20imagen%20home.jpg"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/40" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-2 md:p-12 lg:p-16">
+              {/* Texto izquierda */}
+              <div className="flex flex-col items-start text-left text-white">
+                <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight mb-3">
+                  ¿Por qué MG Eventos?
+                </h2>
+                <p className="text-accent font-heading font-semibold text-lg mb-5">
+                  Fotomatón con experiencia y cercanía
+                </p>
+                <p className="text-white font-body text-lg leading-relaxed max-w-md">
+                  En MG Eventos lo hemos visto una y otra vez: mientras la música suena y la fiesta avanza, el fotomatón se convierte en el lugar donde todos quieren estar. Nuestro equipo cuida cada detalle para que tú solo tengas que preocuparte de disfrutar.
+                </p>
+              </div>
+
+              {/* CTAs derecha */}
+              <div className="flex flex-col items-start md:items-center justify-center gap-4">
+                <a
+                  href="/contacto"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-primary font-heading font-bold text-base hover:bg-neutral-100 shadow-lg transition-all group w-full sm:w-auto justify-center"
+                >
+                  Pedir presupuesto
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-white/40 text-white font-heading font-semibold text-base hover:bg-white/10 backdrop-blur-sm transition-all w-full sm:w-auto justify-center"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Háblanos por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA final */}
       <CallToAction
