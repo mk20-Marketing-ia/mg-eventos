@@ -90,13 +90,6 @@ export default function PantallasLEDPage() {
           "Interior y exterior",
           "Montaje profesional incluido",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          {
-            name: "Pantallas LED para eventos",
-            href: "/pantallas-led-para-eventos-en-galicia",
-          },
-        ]}
       />
 
       <ValueProps

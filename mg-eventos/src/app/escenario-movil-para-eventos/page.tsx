@@ -90,13 +90,6 @@ export default function EscenarioMovilPage() {
           "Montaje en pocas horas",
           "Sonido e iluminación incluidos",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          {
-            name: "Escenario móvil para eventos",
-            href: "/escenario-movil-para-eventos",
-          },
-        ]}
       />
 
       <ValueProps

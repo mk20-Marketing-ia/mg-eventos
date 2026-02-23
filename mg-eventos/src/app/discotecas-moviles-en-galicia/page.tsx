@@ -90,13 +90,6 @@ export default function DiscoMovilPage() {
           "Interior y exterior",
           "Montaje completo incluido",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          {
-            name: "Discotecas móviles en Galicia",
-            href: "/discotecas-moviles-en-galicia",
-          },
-        ]}
       />
 
       <ValueProps

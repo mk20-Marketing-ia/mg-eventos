@@ -87,10 +87,6 @@ export default function DJBodasPage() {
           "+10 años de experiencia",
           "Asesoramiento personalizado",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          { name: "DJ para bodas en Galicia", href: "/dj-para-bodas-en-galicia" },
-        ]}
       />
 
       <ValueProps

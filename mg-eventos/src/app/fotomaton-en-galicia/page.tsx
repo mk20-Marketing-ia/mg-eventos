@@ -87,10 +87,6 @@ export default function FotomatonPage() {
           "Atrezzo incluido",
           "Galería digital",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          { name: "Fotomatón en Galicia", href: "/fotomaton-en-galicia" },
-        ]}
       />
 
       <ValueProps

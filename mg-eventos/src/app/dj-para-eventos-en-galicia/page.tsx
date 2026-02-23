@@ -88,10 +88,6 @@ export default function DJEventosPage() {
           "Música personalizada",
           "Sonido e iluminación incluidos",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          { name: "DJ para eventos en Galicia", href: "/dj-para-eventos-en-galicia" },
-        ]}
       />
 
       <ValueProps

@@ -87,10 +87,6 @@ export default function DJFiestasPage() {
           "Verbenas y fiestas privadas",
           "Sonido e iluminación incluidos",
         ]}
-        breadcrumbs={[
-          { name: "Inicio", href: "/" },
-          { name: "DJ para fiestas en Galicia", href: "/dj-para-fiestas-en-galicia" },
-        ]}
       />
 
       <ValueProps
