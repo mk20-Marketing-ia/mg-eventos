@@ -74,15 +74,15 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
           viewport={{ once: true, margin: "-80px" }}
         >
           {/* Texto */}
-          <div className="flex flex-col items-start text-left text-white">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
             <motion.h2
-              className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight"
+              className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight text-center"
               variants={itemVariants}
             >
               {title}
             </motion.h2>
             <motion.p
-              className="mt-4 max-w-xl text-lg text-white/80 font-body leading-relaxed"
+              className="mt-4 max-w-xl text-lg text-white/80 font-body leading-relaxed text-center text-justify"
               variants={itemVariants}
             >
               {description}
@@ -91,7 +91,7 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-col items-start md:items-center justify-center gap-4"
+            className="flex flex-col items-center md:items-center justify-center gap-4"
             variants={itemVariants}
           >
             <a

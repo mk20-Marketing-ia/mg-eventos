@@ -75,7 +75,7 @@ export default function HomePage() {
             </div>
 
             {/* Descripción original */}
-            <p className="text-white/90 font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-white/90 font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto text-center text-justify">
               Somos animadores de fiesta en Galicia con +10 años creando momentos únicos.
               DJ, discomóvil, fotomatón, pantallas LED y escenario móvil para bodas, fiestas y eventos.
             </p>
@@ -147,8 +147,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 mb-5 group-hover:bg-white/20 transition-colors">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{title}</h3>
-                <p className="text-white/70 font-body text-sm leading-relaxed">{description}</p>
+                <h3 className="font-heading font-bold text-lg text-white mb-3 text-center">{title}</h3>
+                <p className="text-white/70 font-body text-sm leading-relaxed text-center text-justify">{description}</p>
               </div>
             ))}
           </div>
@@ -161,14 +161,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-center min-h-[40rem]">
 
             {/* Columna izquierda — texto */}
-            <div className="py-16 lg:py-20 lg:pr-8">
+            <div className="py-16 lg:py-20 lg:pr-8 text-center md:text-left">
               <span className="inline-block text-secondary font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Quiénes somos
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6 text-center">
                 Sobre MG Eventos
               </h2>
-              <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8">
+              <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8 text-center text-justify">
                 Cada evento tiene su propio carácter, y por eso no existe una
                 fórmula única para animarlo. Lo que sí hay es experiencia,
                 intuición y muchas ganas de pasarlo bien. En MG Eventos
@@ -178,7 +178,7 @@ export default function HomePage() {
               </p>
 
               {/* Lista de tipos de evento */}
-              <ul className="space-y-3 mb-10">
+              <ul className="space-y-3 mb-10 text-left">
                 {[
                   "Fiestas privadas",
                   "Bodas",
@@ -365,10 +365,10 @@ export default function HomePage() {
                   </Badge>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl text-left font-heading font-bold text-neutral-900">
+                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl font-heading font-bold text-neutral-900 text-center">
                     MG Eventos es tu Animador de bodas en Galicia
                   </h2>
-                  <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl text-left font-body">
+                  <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl font-body text-center text-justify">
                     Las bodas son momentos únicos, y tener un animador profesional
                     marca la diferencia entre una fiesta bonita y una que se recuerda
                     toda la vida. Nuestro equipo sabe cuándo subir el ritmo, cuándo
@@ -393,10 +393,10 @@ export default function HomePage() {
               </div>
               {/* Nuestra experiencia + stats — mismo bloque, mismo fondo */}
               <div className="p-6 md:p-8 flex flex-col justify-center">
-                <h3 className="font-heading font-bold text-xl text-neutral-900 mb-2">
+                <h3 className="font-heading font-bold text-xl text-neutral-900 mb-2 text-center">
                   Nuestra experiencia
                 </h3>
-                <p className="text-neutral-500 font-body mb-6">
+                <p className="text-neutral-500 font-body mb-6 text-center text-justify">
                   +10 años animando eventos. En MG Eventos llevamos muchos años
                   ayudando a animar la fiesta
                 </p>
