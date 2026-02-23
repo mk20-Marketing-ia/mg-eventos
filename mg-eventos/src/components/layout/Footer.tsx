@@ -10,6 +10,7 @@ import {
   EMAIL_LINK,
   WHATSAPP_URL,
 } from "@/lib/constants";
+import { CookieSettingsButton } from "@/components/cookies/CookieSettingsButton";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -99,6 +100,22 @@ export function Footer() {
                   Política de privacidad
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/politica-de-cookies"
+                  className="text-neutral-400 hover:text-white text-sm font-body transition-colors"
+                >
+                  Política de cookies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/aviso-legal"
+                  className="text-neutral-400 hover:text-white text-sm font-body transition-colors"
+                >
+                  Aviso legal
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -106,6 +123,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <p className="text-neutral-500 text-sm font-body">
             © {year} {SITE_NAME}. Todos los derechos reservados.
+            <CookieSettingsButton />
           </p>
         </div>
       </Container>

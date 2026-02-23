@@ -9,6 +9,9 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
+import { CookieConsentProvider } from "@/components/cookies/CookieConsentProvider";
+import { GTMConditionalLoader } from "@/components/cookies/GTMConditionalLoader";
+import { CookieBanner } from "@/components/cookies/CookieBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -52,10 +55,14 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="antialiased">
-        <Header />
-        {children}
-        <Footer />
-        <WhatsAppFloat />
+        <CookieConsentProvider>
+          <GTMConditionalLoader />
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppFloat />
+          <CookieBanner />
+        </CookieConsentProvider>
       </body>
     </html>
   );

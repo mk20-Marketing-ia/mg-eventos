@@ -26,15 +26,47 @@ export default function ContactoPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
 
-    // TODO: Conectar con webhook de n8n cuando esté disponible
-    // Por ahora simula envío
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setStatus("sent");
+    try {
+      const response = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          email: formData.email,
+          telefono: formData.telefono || undefined,
+          mensaje: formData.mensaje,
+        }),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (response.ok) {
+        setStatus("sent");
+        if (typeof window !== "undefined" && window.dataLayer) {
+          window.dataLayer.push({
+            event: "contact_form_submit",
+            category: "lead",
+            label: "contacto",
+          });
+        }
+      } else {
+        setStatus("error");
+        setErrorMessage(
+          data.error || "Error al enviar el mensaje. Inténtalo de nuevo."
+        );
+      }
+    } catch {
+      setStatus("error");
+      setErrorMessage(
+        "Error de conexión. Comprueba tu internet e inténtalo de nuevo."
+      );
+    }
   };
 
   return (
@@ -82,6 +114,22 @@ export default function ContactoPage() {
                   <p className="text-green-700 font-body mt-2">
                     Te contestaremos lo antes posible.
                   </p>
+                </div>
+              ) : status === "error" ? (
+                <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+                  <p className="text-red-800 font-heading font-bold">
+                    Error al enviar
+                  </p>
+                  <p className="text-red-700 font-body text-sm mt-1">
+                    {errorMessage}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setStatus("idle")}
+                    className="mt-3 text-sm text-red-700 underline font-body"
+                  >
+                    Volver al formulario
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">

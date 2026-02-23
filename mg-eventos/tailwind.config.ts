@@ -57,14 +57,6 @@ const config: Config = {
         xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05)",
         glow: "0 0 20px rgb(124 58 237 / 0.3)",
       },
-      animation: {
-        "fade-in": "fadeIn 0.6s ease-out forwards",
-        "slide-up": "slideUp 0.6s ease-out forwards",
-        "slide-in-left": "slideInLeft 0.6s ease-out forwards",
-        "slide-in-right": "slideInRight 0.6s ease-out forwards",
-        float: "float 3s ease-in-out infinite",
-        marquee: "marquee var(--duration, 30s) linear infinite",
-      },
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
@@ -90,6 +82,19 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        slideUpFromBottom: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "slide-up": "slideUp 0.6s ease-out forwards",
+        "slide-up-from-bottom": "slideUpFromBottom 0.4s ease-out forwards",
+        "slide-in-left": "slideInLeft 0.6s ease-out forwards",
+        "slide-in-right": "slideInRight 0.6s ease-out forwards",
+        float: "float 3s ease-in-out infinite",
+        marquee: "marquee var(--duration, 30s) linear infinite",
       },
     },
   },

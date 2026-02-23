@@ -28,3 +28,9 @@ export interface CTAProps {
   text: string;
   href: string;
 }
+
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}

@@ -74,12 +74,13 @@ export default function DJEventosPage() {
       <SyntheticHero
         compact
         textWhite
+        primaryCtaAccent
         title="DJ para eventos en Galicia"
         description="Música personalizada, sonido profesional e iluminación adaptada. Hacemos que tu evento suene exactamente como lo imaginaste."
         badgeText="Servicio de DJ"
         badgeLabel="MG Eventos"
         ctaButtons={[
-          { text: "¡Contáctanos!", href: "/contacto", primary: true },
+          { text: "Contáctanos", href: "/contacto", primary: true },
           { text: "Háblanos por WhatsApp", href: WHATSAPP_URL },
         ]}
         microDetails={[
