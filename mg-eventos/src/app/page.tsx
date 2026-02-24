@@ -308,7 +308,7 @@ export default function HomePage() {
         layout="card"
         dark
         badge="Contactar ahora"
-        title="¡Envianos un WhatsApp!"
+        title="¡Envíanos un WhatsApp!"
         description="Háblanos por WhatsApp y te asesoraremos para encontrar la animación perfecta para tu evento"
         primaryButton={{
           text: "Háblanos por WhatsApp",
