@@ -47,7 +47,7 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
       visible: {
         y: 0,
         opacity: 1,
-        transition: { duration: 0.55, ease: [0.22, 0.61, 0.36, 1] },
+        transition: { duration: 0.55, ease: [0.22, 0.61, 0.36, 1] as const },
       },
     };
 
