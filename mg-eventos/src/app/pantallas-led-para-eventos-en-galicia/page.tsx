@@ -61,7 +61,7 @@ export default function PantallasLEDPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="Pantallas LED para eventos en Galicia"
         description="Imagen de alta calidad para cualquier celebración. Interior o exterior, bodas, conferencias, ferias y fiestas populares. Montaje y asistencia técnica incluidos."
         badgeText="Pantallas LED"

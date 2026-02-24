@@ -58,7 +58,7 @@ export default function DJBodasPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="DJ para bodas en Galicia"
         description="La música marca la emoción de cada momento de tu gran día. Con MG Eventos, un equipo cercano y con experiencia que se adapta completamente a tu estilo."
         badgeText="DJ para bodas"

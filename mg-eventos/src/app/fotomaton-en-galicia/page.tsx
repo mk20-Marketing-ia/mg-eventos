@@ -58,7 +58,7 @@ export default function FotomatonPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="Fotomatón en Galicia"
         description="Risas, atrezzo y recuerdos para todos tus invitados. El rincón donde todos quieren estar, desde los más pequeños hasta los más mayores."
         badgeText="Fotomatón"

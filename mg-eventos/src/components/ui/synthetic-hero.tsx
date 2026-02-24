@@ -139,8 +139,10 @@ interface HeroProps {
   breadcrumbs?: BreadcrumbItem[];
   /** Descripción y microDetails en blanco puro (text-white) */
   textWhite?: boolean;
-  /** Botón primario en color acento (naranja/verde) para contraste con fondo morado */
+  /** Botón primario en color acento (naranja) para contraste con fondo morado */
   primaryCtaAccent?: boolean;
+  /** Botón primario blanco — solo para páginas de servicio */
+  primaryCtaWhite?: boolean;
 }
 
 const SyntheticHero = ({
@@ -157,6 +159,7 @@ const SyntheticHero = ({
   breadcrumbs,
   textWhite = false,
   primaryCtaAccent = false,
+  primaryCtaWhite = false,
 }: HeroProps) => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const badgeWrapperRef = useRef<HTMLDivElement | null>(null);
@@ -270,8 +273,8 @@ const SyntheticHero = ({
         </nav>
       )}
 
-      {/* Contenido: centro en móvil, izquierda en escritorio */}
-      <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left px-6 max-w-5xl mx-auto">
+      {/* Contenido — siempre centrado */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
         <div ref={badgeWrapperRef}>
           <div className="mb-6 inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 uppercase tracking-wider cursor-default transition-colors">
             <span className="text-[10px] font-light tracking-[0.18em] text-white/70">
@@ -300,13 +303,15 @@ const SyntheticHero = ({
 
         <div
           ref={ctaRef}
-          className="flex flex-wrap items-center justify-center md:justify-start gap-4"
+          className="flex flex-wrap items-center justify-center gap-4"
         >
           {ctaButtons.map((button, index) => {
             const isPrimary = button.primary ?? index === 0;
-            const primaryClasses = primaryCtaAccent
-              ? "px-8 py-3 rounded-xl text-base font-heading font-semibold bg-accent hover:bg-accent-light text-primary shadow-lg shadow-accent/25 transition-all cursor-pointer inline-flex items-center justify-center"
-              : "px-8 py-3 rounded-xl text-base font-heading font-semibold backdrop-blur-lg bg-secondary/90 hover:bg-secondary shadow-lg shadow-secondary/25 transition-all cursor-pointer text-white inline-flex items-center justify-center";
+            const primaryClasses = primaryCtaWhite
+              ? "px-8 py-3 rounded-xl text-base font-heading font-semibold bg-white hover:bg-white/90 text-primary shadow-lg transition-all cursor-pointer inline-flex items-center justify-center"
+              : primaryCtaAccent
+                ? "px-8 py-3 rounded-xl text-base font-heading font-semibold bg-accent hover:bg-accent-light text-primary shadow-lg shadow-accent/25 transition-all cursor-pointer inline-flex items-center justify-center"
+                : "px-8 py-3 rounded-xl text-base font-heading font-semibold backdrop-blur-lg bg-secondary/90 hover:bg-secondary shadow-lg shadow-secondary/25 transition-all cursor-pointer text-white inline-flex items-center justify-center";
             const classes = isPrimary
               ? primaryClasses
               : "px-8 py-3 rounded-xl text-base font-heading font-medium border border-white/30 text-white hover:bg-white/10 backdrop-blur-lg transition-all cursor-pointer inline-flex items-center justify-center";
@@ -330,7 +335,7 @@ const SyntheticHero = ({
         {microDetails.length > 0 && (
           <ul
             ref={microRef}
-            className={textWhite ? "mt-8 flex flex-wrap justify-center md:justify-start gap-6 text-xs font-light tracking-tight text-white" : "mt-8 flex flex-wrap justify-center md:justify-start gap-6 text-xs font-light tracking-tight text-white/60"}
+            className={textWhite ? "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white" : "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white/60"}
           >
             {microDetails.map((detail, index) => (
               <li key={index} className="flex items-center gap-2">

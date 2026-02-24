@@ -61,7 +61,7 @@ export default function EscenarioMovilPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="Escenario móvil para eventos en Galicia"
         description="El camión escenario más versátil de Galicia. Se despliega en horas y convierte cualquier espacio en un escenario profesional listo para la música y el público."
         badgeText="Camión escenario"

@@ -58,7 +58,7 @@ export default function DJFiestasPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="DJ para fiestas en Galicia"
         description="Transformamos cualquier celebración en un momento único. Verbenas, cumpleaños, fiestas privadas — llevamos la música, el sonido y la energía."
         badgeText="DJ para fiestas"

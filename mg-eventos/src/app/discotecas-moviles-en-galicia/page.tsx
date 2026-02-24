@@ -61,7 +61,7 @@ export default function DiscoMovilPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="Discotecas móviles en Galicia"
         description="La experiencia de una sala de fiestas en cualquier lugar: jardines, plazas, fincas, salones. Sonido, iluminación y animación profesional donde tú lo necesites."
         badgeText="Discomóvil"

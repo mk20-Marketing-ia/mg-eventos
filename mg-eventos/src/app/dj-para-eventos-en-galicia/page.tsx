@@ -59,7 +59,7 @@ export default function DJEventosPage() {
       <SyntheticHero
         compact
         textWhite
-        primaryCtaAccent
+        primaryCtaWhite
         title="DJ para eventos en Galicia"
         description="Música personalizada, sonido profesional e iluminación adaptada. Hacemos que tu evento suene exactamente como lo imaginaste."
         badgeText="Servicio de DJ"
