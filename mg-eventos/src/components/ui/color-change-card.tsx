@@ -56,9 +56,9 @@ const ServiceCard = ({ heading, description, imgSrc, href, index, isInView }: Se
   return (
     <Link href={href} className="block">
       <motion.div
-        initial={{ y: -56, opacity: 0 }}
+        initial={{ y: -72, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+        transition={{ delay: 0.15 + index * 0.12, duration: 0.78, ease: [0.22, 0.61, 0.36, 1] }}
         className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-2xl bg-slate-300"
       >
         {/* Imagen de fondo */}

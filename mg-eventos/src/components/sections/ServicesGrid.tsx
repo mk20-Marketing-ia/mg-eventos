@@ -1,5 +1,5 @@
 import { Section } from "@/components/ui/Section";
-import { Heading } from "@/components/ui/Heading";
+import { AnimatedSectionTitle } from "@/components/ui/animated-section-title";
 import dynamic from "next/dynamic";
 import type { ServiceCardItem } from "@/components/ui/color-change-card";
 
@@ -50,9 +50,12 @@ export function ServicesGrid({ title, subtitle, intro, services }: ServicesGridP
   return (
     <Section variant="light" id="servicios">
       <div className="text-center mb-10">
-        <Heading as="h2" className="text-neutral-900 text-center">
+        <AnimatedSectionTitle
+          as="h2"
+          className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-neutral-900 text-center"
+        >
           {title}
-        </Heading>
+        </AnimatedSectionTitle>
         {subtitle && (
           <p className="font-heading font-semibold text-secondary text-lg mt-2">
             {subtitle}

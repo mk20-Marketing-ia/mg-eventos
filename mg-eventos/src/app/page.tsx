@@ -20,6 +20,7 @@ const ScrollExpandHero = dynamic(
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { CtaCard } from "@/components/ui/cta-card";
+import { AnimatedSectionTitle } from "@/components/ui/animated-section-title";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Badge } from "@/components/ui/Badge";
 import { SchemaOrganization } from "@/components/seo/SchemaOrganization";
@@ -166,9 +167,9 @@ export default function HomePage() {
               <span className="inline-block text-secondary font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Quiénes somos
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6 text-center lg:text-left">
+              <AnimatedSectionTitle className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6 text-center lg:text-left">
                 Sobre MG Eventos
-              </h2>
+              </AnimatedSectionTitle>
               <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8 text-center lg:text-left text-justify">
                 Cada evento tiene su propio carácter, y por eso no existe una
                 fórmula única para animarlo. Lo que sí hay es experiencia,
@@ -338,9 +339,13 @@ export default function HomePage() {
                   </Badge>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl font-heading font-bold text-neutral-900 text-center lg:text-left">
+                  <AnimatedSectionTitle
+                    className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl font-heading font-bold text-neutral-900 text-center lg:text-left"
+                    delay={0.1}
+                    duration={0.6}
+                  >
                     MG Eventos es tu Animador de bodas en Galicia
-                  </h2>
+                  </AnimatedSectionTitle>
                   <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl font-body text-center lg:text-left text-justify">
                     Las bodas son momentos únicos, y tener un animador profesional
                     marca la diferencia entre una fiesta bonita y una que se recuerda

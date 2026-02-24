@@ -42,6 +42,14 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
         transition: { type: "spring" as const, stiffness: 100, damping: 12 },
       },
     };
+    const titleVariants = {
+      hidden: { y: -28, opacity: 0 },
+      visible: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.55, ease: [0.22, 0.61, 0.36, 1] },
+      },
+    };
 
     return (
       <div
@@ -77,7 +85,7 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
           <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
             <motion.h2
               className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight text-center md:text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]"
-              variants={itemVariants}
+              variants={titleVariants}
             >
               {title}
             </motion.h2>
