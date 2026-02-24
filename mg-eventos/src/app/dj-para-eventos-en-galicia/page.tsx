@@ -129,7 +129,7 @@ export default function DJEventosPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu DJ de eventos en Galicia"
         description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición un DJ para eventos en Galicia con la experiencia y la cercanía que necesitas. Te asesoramos sin compromiso y nos adaptamos a tu celebración."
-        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -143,14 +143,14 @@ export default function DJEventosPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para eventos de empresa
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 Ambiente profesional con música y equipos de calidad
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 En un evento corporativo, la imagen lo es todo. Por eso, además de un
                 DJ profesional en Galicia, contamos con{" "}
                 <Link
@@ -161,7 +161,7 @@ export default function DJEventosPage() {
                 </Link>{" "}
                 para reforzar la comunicación de tu marca, presentaciones o vídeos.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed text-center lg:text-left text-justify">
                 Y si buscas un toque más cercano, nuestro{" "}
                 <Link
                   href="/fotomaton-en-galicia"
@@ -191,13 +191,13 @@ export default function DJEventosPage() {
 
             {/* Columna derecha — tarjetas de servicios complementarios */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Pantallas LED */}
+              {/* Pantallas LED — móvil centrado */}
               <Link
                 href="/pantallas-led-para-eventos-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary/30 border border-secondary/40 flex items-center justify-center mb-4">
                     <Monitor className="w-5 h-5 text-white" />
                   </div>
@@ -213,13 +213,13 @@ export default function DJEventosPage() {
                 </div>
               </Link>
 
-              {/* Fotomatón */}
+              {/* Fotomatón — móvil centrado */}
               <Link
                 href="/fotomaton-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Camera className="w-5 h-5 text-white" />
                   </div>

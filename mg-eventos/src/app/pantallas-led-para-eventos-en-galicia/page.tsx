@@ -134,7 +134,7 @@ export default function PantallasLEDPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu montaje de pantallas LED"
         description="Tu evento merece una imagen a la altura. En MG Eventos te ofrecemos pantallas LED en Galicia con montaje profesional, asistencia técnica y opciones adaptadas a tus necesidades. Te asesoramos sin compromiso y elegimos el formato ideal para tu espacio."
-        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -148,17 +148,17 @@ export default function PantallasLEDPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Todo tipo de eventos
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 Para cada espacio, la pantalla perfecta
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 Las pantallas LED modulares funcionan igual de bien en exteriores que en interiores. En una plaza de pueblo o en un campo de fiesta, su potencia asegura imagen nítida incluso de día.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed text-center lg:text-left text-justify">
                 Combinamos las pantallas con nuestro{" "}
                 <Link
                   href="/fotomaton-en-galicia"
@@ -194,10 +194,10 @@ export default function PantallasLEDPage() {
 
             {/* Columna derecha — tarjetas de tipos de uso */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Bodas y celebraciones */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Bodas y celebraciones — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Tv className="w-5 h-5 text-accent" />
                   </div>
@@ -210,10 +210,10 @@ export default function PantallasLEDPage() {
                 </div>
               </div>
 
-              {/* Eventos corporativos */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Eventos corporativos — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary/35 border border-secondary/40 flex items-center justify-center mb-4">
                     <Building2 className="w-5 h-5 text-violet-200" />
                   </div>

@@ -71,7 +71,7 @@ export function Footer() {
                   href={PHONE_LINK}
                   className="flex items-center gap-2 text-neutral-400 hover:text-white text-sm font-body transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-accent" />
+                  <Phone className="w-4 h-4 text-white" />
                   {PHONE}
                 </a>
               </li>
@@ -80,7 +80,7 @@ export function Footer() {
                   href={EMAIL_LINK}
                   className="flex items-center gap-2 text-neutral-400 hover:text-white text-sm font-body transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-accent" />
+                  <Mail className="w-4 h-4 text-white" />
                   {EMAIL}
                 </a>
               </li>
@@ -91,7 +91,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-neutral-400 hover:text-white text-sm font-body transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-whatsapp" />
+                  <MessageCircle className="w-4 h-4 text-white" />
                   WhatsApp: {PHONE}
                 </a>
               </li>

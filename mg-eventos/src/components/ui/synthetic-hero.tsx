@@ -270,8 +270,8 @@ const SyntheticHero = ({
         </nav>
       )}
 
-      {/* Contenido */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
+      {/* Contenido: centro en móvil, izquierda en escritorio */}
+      <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left px-6 max-w-5xl mx-auto">
         <div ref={badgeWrapperRef}>
           <div className="mb-6 inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 uppercase tracking-wider cursor-default transition-colors">
             <span className="text-[10px] font-light tracking-[0.18em] text-white/70">
@@ -300,7 +300,7 @@ const SyntheticHero = ({
 
         <div
           ref={ctaRef}
-          className="flex flex-wrap items-center justify-center gap-4"
+          className="flex flex-wrap items-center justify-center md:justify-start gap-4"
         >
           {ctaButtons.map((button, index) => {
             const isPrimary = button.primary ?? index === 0;
@@ -330,7 +330,7 @@ const SyntheticHero = ({
         {microDetails.length > 0 && (
           <ul
             ref={microRef}
-            className={textWhite ? "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white" : "mt-8 flex flex-wrap justify-center gap-6 text-xs font-light tracking-tight text-white/60"}
+            className={textWhite ? "mt-8 flex flex-wrap justify-center md:justify-start gap-6 text-xs font-light tracking-tight text-white" : "mt-8 flex flex-wrap justify-center md:justify-start gap-6 text-xs font-light tracking-tight text-white/60"}
           >
             {microDetails.map((detail, index) => (
               <li key={index} className="flex items-center gap-2">

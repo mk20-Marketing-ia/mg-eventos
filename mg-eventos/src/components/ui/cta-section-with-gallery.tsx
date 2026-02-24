@@ -160,16 +160,18 @@ export function CtaSectionWithGallery({
   return (
     <section className={cn("py-16 md:py-24 bg-white", className)}>
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
-        <ContainerStagger className="flex flex-col text-center md:text-left items-center md:items-start">
+        <ContainerStagger className="flex flex-col text-center lg:text-left items-center lg:items-start">
           {tag && (
             <ContainerAnimated className="mb-4 block text-xs font-medium text-secondary md:text-sm font-heading uppercase tracking-wider">
               {tag}
             </ContainerAnimated>
           )}
-          <ContainerAnimated className="text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl font-heading text-center">
-            {title}
+          <ContainerAnimated>
+            <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl font-heading text-center lg:text-left">
+              {title}
+            </h2>
           </ContainerAnimated>
-          <ContainerAnimated className="my-4 text-base text-neutral-600 md:my-6 md:text-lg font-body leading-relaxed text-center text-justify">
+          <ContainerAnimated className="my-4 text-base text-neutral-600 md:my-6 md:text-lg font-body leading-relaxed text-center lg:text-left text-justify">
             {description}
           </ContainerAnimated>
           {listItems.length > 0 && (

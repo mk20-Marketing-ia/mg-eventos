@@ -128,7 +128,7 @@ export default function DJFiestasPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu fiesta con DJ en Galicia"
         description="¿Quieres que tu próxima celebración sea inolvidable? En MG Eventos ponemos a tu disposición un DJ para fiestas en Galicia con sonido, iluminación y animación adaptados a cada ocasión. Te asesoramos sin compromiso y diseñamos un plan a medida."
-        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Contáctanos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -142,14 +142,14 @@ export default function DJFiestasPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para todo tipo de fiestas
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 La energía perfecta para cada fiesta
               </h2>
-              <p className="text-white/85 font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white/85 font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 Si buscas un montaje completo, ponemos a tu disposición nuestro{" "}
                 <Link
                   href="/escenario-movil-para-eventos"
@@ -195,10 +195,10 @@ export default function DJFiestasPage() {
 
             {/* Columna derecha — tarjetas de tipos de fiesta */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Verbenas */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Verbenas — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary/35 border border-secondary/40 flex items-center justify-center mb-4">
                     <Tent className="w-5 h-5 text-violet-200" />
                   </div>
@@ -209,10 +209,10 @@ export default function DJFiestasPage() {
                 </div>
               </div>
 
-              {/* Cumpleaños */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Cumpleaños — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Cake className="w-5 h-5 text-accent" />
                   </div>

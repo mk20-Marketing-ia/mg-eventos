@@ -11,7 +11,7 @@ interface CTAButton {
   text: string;
   href: string;
   icon?: CTAIcon;
-  variant?: "primary" | "outline" | "whatsapp" | "accent";
+  variant?: "primary" | "outline" | "whatsapp" | "accent" | "white";
   external?: boolean;
   className?: string;
 }
@@ -57,6 +57,8 @@ function CTAButtonEl({
       "bg-secondary text-white hover:bg-secondary-light shadow-md shadow-secondary/20 hover:shadow-lg hover:shadow-secondary/30 hover:-translate-y-0.5",
     accent:
       "bg-accent text-primary hover:bg-accent-light shadow-md shadow-accent/25 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5",
+    white:
+      "bg-white text-primary hover:bg-neutral-100 shadow-md shadow-black/10 hover:shadow-lg hover:-translate-y-0.5",
     // outline sobre fondo claro → borde violeta
     outline:
       "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white",

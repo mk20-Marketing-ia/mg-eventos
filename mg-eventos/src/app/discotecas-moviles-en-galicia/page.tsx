@@ -133,7 +133,7 @@ export default function DiscoMovilPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para disco móvil para fiestas"
         description="¿Quieres asegurarte de que tu próxima celebración sea un éxito? En MG Eventos ponemos a tu disposición una discomóvil en Galicia con la experiencia y cercanía que necesitas. Te asesoramos sin compromiso y elegimos el montaje perfecto para tu fiesta."
-        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -147,17 +147,17 @@ export default function DiscoMovilPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Para cualquier fiesta
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 Servicio flexible para cada tipo de evento
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 Cada celebración es distinta. Nuestra discomóvil se adapta a todas las situaciones, con un montaje más sencillo para eventos íntimos o una puesta en escena espectacular para grandes fiestas.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed text-center lg:text-left text-justify">
                 Puedes elegir entre diferentes configuraciones: sonido, luces,{" "}
                 <Link
                   href="/pantallas-led-para-eventos-en-galicia"
@@ -193,10 +193,10 @@ export default function DiscoMovilPage() {
 
             {/* Columna derecha — tarjetas de formatos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Fiestas íntimas */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Fiestas íntimas — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Music2 className="w-5 h-5 text-accent" />
                   </div>
@@ -209,10 +209,10 @@ export default function DiscoMovilPage() {
                 </div>
               </div>
 
-              {/* Grandes eventos */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Grandes eventos — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary/35 border border-secondary/40 flex items-center justify-center mb-4">
                     <Layers className="w-5 h-5 text-violet-200" />
                   </div>

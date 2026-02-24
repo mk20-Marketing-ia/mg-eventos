@@ -134,7 +134,7 @@ export default function EscenarioMovilPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu camión escenario en Galicia"
         description="Organizar un evento es más sencillo cuando cuentas con el apoyo adecuado. Con nuestro camión escenario tendrás estructura, sonido, luces y montaje rápido en un solo servicio. Te asesoramos sin compromiso y buscamos la mejor configuración para tu evento."
-        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Pregúntanos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -148,14 +148,14 @@ export default function EscenarioMovilPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Servicio completo
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 Sonido, imagen y escenario en un solo servicio
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 No se trata solo de tener un escenario: lo importante es que luzca y suene como debe. Por eso en nuestro alquiler incluimos equipos de sonido potentes y{" "}
                 <Link
                   href="/pantallas-led-para-eventos-en-galicia"
@@ -165,7 +165,7 @@ export default function EscenarioMovilPage() {
                 </Link>{" "}
                 adaptadas a cada evento.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed text-center lg:text-left text-justify">
                 No tienes que coordinar a diferentes proveedores: el escenario, el sonido y las luces viajan juntos. Añade nuestro{" "}
                 <Link
                   href="/dj-para-fiestas-en-galicia"
@@ -195,12 +195,13 @@ export default function EscenarioMovilPage() {
             {/* Columna derecha — tarjetas de complementos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Pantallas LED */}
+              {/* Pantallas LED — móvil centrado */}
               <Link
                 href="/pantallas-led-para-eventos-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary-light/30 border border-white/20 flex items-center justify-center mb-4">
                     <Monitor className="w-5 h-5 text-white" />
                   </div>
@@ -216,13 +217,13 @@ export default function EscenarioMovilPage() {
                 </div>
               </Link>
 
-              {/* Disco móvil */}
+              {/* Disco móvil — móvil centrado */}
               <Link
                 href="/discotecas-moviles-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Speaker className="w-5 h-5 text-white" />
                   </div>

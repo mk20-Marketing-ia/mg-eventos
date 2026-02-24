@@ -25,9 +25,9 @@ export function ValueProps({ items, variant = "light" }: ValuePropsProps) {
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary/10 mb-5">
               <item.icon className="w-7 h-7 text-secondary" />
             </div>
-            <h3 className="font-heading font-bold text-lg text-neutral-900 mb-3">
+            <p className="font-heading font-bold text-lg text-neutral-900 mb-3">
               {item.title}
-            </h3>
+            </p>
             <p className="text-neutral-600 font-body text-sm leading-relaxed text-center text-justify">
               {item.description}
             </p>

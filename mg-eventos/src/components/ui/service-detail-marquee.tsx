@@ -77,20 +77,20 @@ export function ServiceDetailMarquee({
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* ── Columna izquierda — contenido ─────────── */}
-          <div className="text-center md:text-left">
+          {/* ── Columna izquierda — contenido: móvil centro, escritorio izquierda ─────────── */}
+          <div className="text-center lg:text-left">
             {tag && (
               <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-heading font-semibold text-xs uppercase tracking-[0.15em] mb-5">
                 {tag}
               </span>
             )}
 
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-5 text-center">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-5 text-center lg:text-left">
               {title}
             </h2>
 
             {paragraphs.map((p, i) => (
-              <p key={i} className="text-neutral-600 font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p key={i} className="text-neutral-600 font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 {p}
               </p>
             ))}

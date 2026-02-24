@@ -76,13 +76,13 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
           {/* Texto — sombra para contraste sobre imagen */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left text-white">
             <motion.h2
-              className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]"
+              className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl font-heading leading-tight text-center md:text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]"
               variants={itemVariants}
             >
               {title}
             </motion.h2>
             <motion.p
-              className="mt-4 max-w-xl text-lg text-white font-body leading-relaxed text-center text-justify drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]"
+              className="mt-4 max-w-xl text-lg text-white font-body leading-relaxed text-center md:text-left text-justify drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]"
               variants={itemVariants}
             >
               {description}

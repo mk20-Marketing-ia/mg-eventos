@@ -130,7 +130,7 @@ export default function FotomatonPage() {
         badge="Presupuesto sin compromiso"
         title="Solicita presupuesto para tu espejo fotomatón"
         description="Tu boda o fiesta es un día único y merece detalles que lo hagan inolvidable. Con el fotomatón de MG Eventos, tus invitados tendrán un espacio para divertirse, reír y guardar recuerdos especiales. Nos adaptamos a tu estilo y cuidamos cada detalle."
-        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "accent" }}
+        primaryButton={{ text: "Hablemos", href: "/contacto", icon: "arrow", variant: "white" }}
         secondaryButton={{ text: "WhatsApp directo", href: WHATSAPP_URL, icon: "whatsapp", variant: "whatsapp", external: true }}
       />
 
@@ -144,17 +144,17 @@ export default function FotomatonPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Columna izquierda — texto */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-block text-accent font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Tu gran día
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6 text-center lg:text-left">
                 El rincón favorito de tu boda
               </h2>
-              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed mb-4 text-center lg:text-left text-justify">
                 Cada boda es diferente, y por eso ofrecemos un espejo fotomatón que se adapta al estilo de tu celebración. Desde ambientes elegantes y románticos hasta fiestas modernas y desenfadadas, puede personalizarse para encajar con la decoración y la temática del evento.
               </p>
-              <p className="text-white font-body text-lg leading-relaxed text-center text-justify">
+              <p className="text-white font-body text-lg leading-relaxed text-center lg:text-left text-justify">
                 Si buscas completar la experiencia, combinamos el fotomatón con nuestro{" "}
                 <Link
                   href="/dj-para-bodas-en-galicia"
@@ -183,13 +183,13 @@ export default function FotomatonPage() {
 
             {/* Columna derecha — tarjetas de ocasiones */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Bodas */}
+              {/* Bodas — móvil centrado */}
               <Link
                 href="/dj-para-bodas-en-galicia"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-accent/30 border border-accent/40 flex items-center justify-center mb-4">
                     <Heart className="w-5 h-5 text-white" />
                   </div>
@@ -205,10 +205,10 @@ export default function FotomatonPage() {
                 </div>
               </Link>
 
-              {/* Fiestas */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300">
+              {/* Fiestas — móvil centrado */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 flex flex-col items-center text-center sm:items-stretch sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
+                <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                   <div className="w-10 h-10 rounded-xl bg-secondary-light/30 border border-white/20 flex items-center justify-center mb-4">
                     <Smile className="w-5 h-5 text-white" />
                   </div>
