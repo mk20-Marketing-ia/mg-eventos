@@ -79,7 +79,7 @@ const ServiceCard = ({ heading, description, imgSrc, href, index, isInView }: Se
           <ArrowRight className="ml-auto text-2xl text-white/70 transition-transform duration-500 group-hover:-rotate-45 group-hover:text-white" />
 
           <div>
-            <h3 className="font-heading font-semibold text-2xl md:text-3xl mb-1">
+            <h3 className="font-heading font-semibold text-[23px] mb-1">
               {heading}
             </h3>
             {description ? <p className="font-body text-sm text-white/80 leading-snug">{description}</p> : null}

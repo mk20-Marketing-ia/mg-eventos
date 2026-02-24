@@ -129,8 +129,20 @@ const ScrollExpandMedia = ({
   const mediaHeight = 400 + scrollProgress * (isMobile ? 200 : 400);
   const textTranslateX = scrollProgress * (isMobile ? 180 : 150);
 
-  const firstWord = title ? title.split(" ")[0] : "";
-  const restOfTitle = title ? title.split(" ").slice(1).join(" ") : "";
+  // Primera línea: hasta " que " (ej. "Hacemos que"); segunda: el resto ("nadie se quede sentado")
+  const queBreak = title ? title.indexOf(" que ") : -1;
+  const firstLine =
+    queBreak >= 0
+      ? title!.slice(0, queBreak + 5).trimEnd()
+      : title
+        ? title.split(" ")[0]
+        : "";
+  const secondLine =
+    queBreak >= 0
+      ? title!.slice(queBreak + 5).trimStart()
+      : title
+        ? title.split(" ").slice(1).join(" ")
+        : "";
 
   return (
     <div
@@ -242,13 +254,13 @@ const ScrollExpandMedia = ({
                   className="block"
                   style={{ transform: `translateX(-${textTranslateX}vw)` }}
                 >
-                  {firstWord}
+                  {firstLine}
                 </motion.span>
                 <motion.span
                   className="block"
                   style={{ transform: `translateX(${textTranslateX}vw)` }}
                 >
-                  {restOfTitle}
+                  {secondLine}
                 </motion.span>
               </h1>
 
