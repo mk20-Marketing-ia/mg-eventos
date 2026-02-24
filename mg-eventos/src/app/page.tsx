@@ -200,7 +200,7 @@ export default function HomePage() {
               </ul>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
