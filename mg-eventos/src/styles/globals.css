@@ -33,3 +33,19 @@
     text-wrap: balance;
   }
 }
+
+/* Animación suave para el botón CTA principal (ej. Contáctanos) */
+@keyframes cta-button-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px 0 rgb(139 92 246 / 0.35);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 6px 20px 2px rgb(139 92 246 / 0.45);
+    transform: translateY(-2px);
+  }
+}
+
+.animate-cta-button {
+  animation: cta-button-pulse 2.5s ease-in-out infinite;
+}

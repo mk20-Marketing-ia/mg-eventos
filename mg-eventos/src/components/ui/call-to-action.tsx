@@ -9,6 +9,7 @@ interface CTAButton {
   icon?: CTAIcon;
   variant?: "primary" | "outline" | "whatsapp" | "accent";
   external?: boolean;
+  className?: string;
 }
 
 interface CallToActionProps {
@@ -24,6 +25,8 @@ interface CallToActionProps {
   /** Descripción en blanco puro (text-white) en layout card dark */
   descriptionWhite?: boolean;
   className?: string;
+  /** Clase extra para el botón primario (ej. animación) */
+  primaryButtonClassName?: string;
 }
 
 const iconMap = {
@@ -40,6 +43,7 @@ function CTAButtonEl({
   variant = "primary",
   external = false,
   onDark = false,
+  className: extraClass,
 }: CTAButton & { onDark?: boolean }) {
   const base =
     "inline-flex items-center justify-center gap-2 font-heading font-semibold rounded-xl px-7 py-3 text-base transition-all duration-200 cursor-pointer";
@@ -67,7 +71,7 @@ function CTAButtonEl({
     : {};
 
   return (
-    <a href={href} className={cn(base, styles[resolvedVariant])} {...anchorProps}>
+    <a href={href} className={cn(base, styles[resolvedVariant], extraClass)} {...anchorProps}>
       {text}
       {icon !== "none" && iconMap[icon]}
     </a>
@@ -84,6 +88,7 @@ export function CallToAction({
   dark = false,
   descriptionWhite = false,
   className,
+  primaryButtonClassName,
 }: CallToActionProps) {
   // ── FULL WIDTH ────────────────────────────────────────────────
   if (layout === "full") {
@@ -111,7 +116,7 @@ export function CallToAction({
             )}
             <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
               {primaryButton && (
-                <CTAButtonEl {...primaryButton} onDark />
+                <CTAButtonEl {...primaryButton} className={primaryButtonClassName} onDark />
               )}
               {secondaryButton && (
                 <CTAButtonEl
@@ -162,7 +167,7 @@ export function CallToAction({
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {primaryButton && (
-              <CTAButtonEl {...primaryButton} onDark={dark} />
+              <CTAButtonEl {...primaryButton} className={primaryButtonClassName} onDark={dark} />
             )}
             {secondaryButton && (
               <CTAButtonEl

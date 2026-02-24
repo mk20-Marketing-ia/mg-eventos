@@ -34,24 +34,9 @@ export const metadata: Metadata = createMetadata({
 });
 
 const serviciosRelacionados: ServiceCardItem[] = [
-  {
-    heading: "Fotomatón para bodas",
-    description: "Risas y recuerdos para todos tus invitados. Atrezzo y galería digital incluidos.",
-    href: "/fotomaton-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
-  },
-  {
-    heading: "Pantallas LED",
-    description: "Proyecta vuestros momentos en alta resolución. Impacto visual en el gran día.",
-    href: "/pantallas-led-para-eventos-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
-  },
-  {
-    heading: "DJ para fiestas",
-    description: "Cuando la boda termina, la fiesta continúa. Verbenas y celebraciones privadas.",
-    href: "/dj-para-fiestas-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
-  },
+  { heading: "Fotomatón para bodas", description: "", href: "/fotomaton-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg" },
+  { heading: "Pantallas LED", description: "", href: "/pantallas-led-para-eventos-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg" },
+  { heading: "DJ para fiestas", description: "", href: "/dj-para-fiestas-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg" },
 ];
 
 export default function DJBodasPage() {

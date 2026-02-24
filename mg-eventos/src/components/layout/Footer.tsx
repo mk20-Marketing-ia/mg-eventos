@@ -44,9 +44,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
+            <p className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
               Servicios
-            </h3>
+            </p>
             <ul className="space-y-2">
               {SERVICES.map((service) => (
                 <li key={service.slug}>
@@ -62,9 +62,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
+            <p className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
               Contacto
-            </h3>
+            </p>
             <ul className="space-y-3">
               <li>
                 <a
@@ -99,9 +99,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
+            <p className="font-heading font-bold text-sm uppercase tracking-wider text-neutral-300 mb-4">
               Legal
-            </h3>
+            </p>
             <ul className="space-y-2">
               <li>
                 <Link

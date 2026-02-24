@@ -232,25 +232,25 @@ const ScrollExpandMedia = ({
                 )}
               </div>
 
-              {/* Título principal — las dos palabras se separan al scrollear */}
-              <div
-                className={`flex items-center justify-center text-center gap-3 md:gap-6 w-full relative z-10 transition-none flex-col pointer-events-none ${
+              {/* Título principal — un solo H1 para SEO; las dos partes se separan al scrollear */}
+              <h1
+                className={`flex items-center justify-center text-center gap-3 md:gap-6 w-full relative z-10 transition-none flex-col pointer-events-none text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight leading-none drop-shadow-2xl ${
                   textBlend ? "mix-blend-difference" : "mix-blend-normal"
                 }`}
               >
-                <motion.h1
-                  className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight leading-none drop-shadow-2xl transition-none"
+                <motion.span
+                  className="block"
                   style={{ transform: `translateX(-${textTranslateX}vw)` }}
                 >
                   {firstWord}
-                </motion.h1>
-                <motion.h1
-                  className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-center text-white tracking-tight leading-none drop-shadow-2xl transition-none"
+                </motion.span>
+                <motion.span
+                  className="block"
                   style={{ transform: `translateX(${textTranslateX}vw)` }}
                 >
                   {restOfTitle}
-                </motion.h1>
-              </div>
+                </motion.span>
+              </h1>
 
               {/* Indicador de scroll animado */}
               {!mediaFullyExpanded && (

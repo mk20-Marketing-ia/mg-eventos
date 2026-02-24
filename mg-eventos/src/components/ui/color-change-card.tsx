@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export interface ServiceCardItem {
@@ -18,21 +18,19 @@ interface ColorChangeCardsProps {
 }
 
 const ColorChangeCards = ({ services, className = "" }: ColorChangeCardsProps) => {
-  // Con 5 servicios: fila 1 → 3 cards, fila 2 → 2 cards centradas
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
   const row1 = services.slice(0, 3);
   const row2 = services.slice(3);
 
   return (
-    <div className={`px-4 py-4 md:px-8 ${className}`}>
+    <div ref={ref} className={`px-4 py-4 md:px-8 ${className}`}>
       <div className="mx-auto w-full max-w-6xl space-y-4 md:space-y-6">
-        {/* Fila 1: hasta 3 cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {row1.map((item, i) => (
-            <ServiceCard key={i} {...item} />
+            <ServiceCard key={i} index={i} isInView={isInView} {...item} />
           ))}
         </div>
-
-        {/* Fila 2: cards restantes, centradas */}
         {row2.length > 0 && (
           <div
             className={`grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 ${
@@ -42,7 +40,7 @@ const ColorChangeCards = ({ services, className = "" }: ColorChangeCardsProps) =
             }`}
           >
             {row2.map((item, i) => (
-              <ServiceCard key={i + 3} {...item} />
+              <ServiceCard key={i + 3} index={i + 3} isInView={isInView} {...item} />
             ))}
           </div>
         )}
@@ -52,13 +50,15 @@ const ColorChangeCards = ({ services, className = "" }: ColorChangeCardsProps) =
 };
 
 // --- ServiceCard ---
-type ServiceCardProps = ServiceCardItem;
+type ServiceCardProps = ServiceCardItem & { index: number; isInView: boolean };
 
-const ServiceCard = ({ heading, description, imgSrc, href }: ServiceCardProps) => {
+const ServiceCard = ({ heading, description, imgSrc, href, index, isInView }: ServiceCardProps) => {
   return (
     <Link href={href} className="block">
       <motion.div
-        transition={{ staggerChildren: 0.035 }}
+        initial={{ y: -56, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut", staggerChildren: 0.035 }}
         whileHover="hover"
         className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-2xl bg-slate-300"
       >
@@ -85,7 +85,7 @@ const ServiceCard = ({ heading, description, imgSrc, href }: ServiceCardProps) =
                 <AnimatedLetter letter={letter} key={index} />
               ))}
             </h4>
-            <p className="font-body text-sm text-white/80 leading-snug">{description}</p>
+            {description ? <p className="font-body text-sm text-white/80 leading-snug">{description}</p> : null}
           </div>
         </div>
       </motion.div>

@@ -292,41 +292,11 @@ export default function HomePage() {
         subtitle="Contrata música para tu evento"
         intro="Nuestro trabajo no es solo poner música, sino hacer que todo el evento funcione como un conjunto."
         services={[
-          {
-            title: "Servicio de DJ",
-            description:
-              "Creamos la mejor atmósfera para eventos con música adaptada a cada momento. Tú eliges el estilo, nosotros hacemos que suene perfecto.",
-            href: "/dj-para-eventos-en-galicia",
-            imageAlt: "Servicio de DJ para eventos en Galicia",
-          },
-          {
-            title: "Disco móvil",
-            description:
-              "Nuestra discomóvil lleva la fiesta donde tú quieras. Montaje rápido, sonido de alta calidad e iluminación espectacular para disfrutar al máximo",
-            href: "/discotecas-moviles-en-galicia",
-            imageAlt: "Discoteca móvil para eventos en Galicia",
-          },
-          {
-            title: "Camión escenario",
-            description:
-              "Perfecto para verbenas, conciertos o ferias, incluye estructura, sonido e iluminación profesional. Rápido de montar, versátil y con gran impacto visual.",
-            href: "/escenario-movil-para-eventos",
-            imageAlt: "Camión escenario para eventos en Galicia",
-          },
-          {
-            title: "Pantallas LED",
-            description:
-              "Desde conciertos hasta conferencias o bodas, adaptamos el tamaño y la configuración a cada evento. Una experiencia visual inolvidable.",
-            href: "/pantallas-led-para-eventos-en-galicia",
-            imageAlt: "Pantallas LED para eventos en Galicia",
-          },
-          {
-            title: "Fotomatón",
-            description:
-              "Divertido, moderno y totalmente personalizable, ideal para bodas, cumpleaños y fiestas. Ríe, posa y guarda un recuerdo único de tu celebración.",
-            href: "/fotomaton-en-galicia",
-            imageAlt: "Fotomatón para eventos en Galicia",
-          },
+          { title: "Servicio de DJ", description: "", href: "/dj-para-eventos-en-galicia", imageAlt: "Servicio de DJ para eventos en Galicia" },
+          { title: "Disco móvil", description: "", href: "/discotecas-moviles-en-galicia", imageAlt: "Discoteca móvil para eventos en Galicia" },
+          { title: "Camión escenario", description: "", href: "/escenario-movil-para-eventos", imageAlt: "Camión escenario para eventos en Galicia" },
+          { title: "Pantallas LED", description: "", href: "/pantallas-led-para-eventos-en-galicia", imageAlt: "Pantallas LED para eventos en Galicia" },
+          { title: "Fotomatón", description: "", href: "/fotomaton-en-galicia", imageAlt: "Fotomatón para eventos en Galicia" },
         ]}
       />
 
@@ -379,8 +349,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Columna derecha — UNA sola tarjeta: imagen arriba + stats abajo, sin huecos */}
-            <div className="w-full max-w-[520px] mx-auto lg:mx-0 rounded-xl overflow-hidden bg-neutral-50 shadow-sm">
+            {/* Columna derecha — UNA sola tarjeta: imagen arriba + stats abajo, centrada en todas las vistas */}
+            <div className="w-full max-w-[520px] mx-auto rounded-xl overflow-hidden bg-neutral-50 shadow-sm">
               {/* Cabecera imagen: 520×260 px — misma tarjeta, sin gap */}
               <div className="w-full h-[260px] flex-shrink-0 relative overflow-hidden">
                 <Image
@@ -400,11 +370,11 @@ export default function HomePage() {
                   +10 años animando eventos. En MG Eventos llevamos muchos años
                   ayudando a animar la fiesta
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
                   {[
                     { value: 1600, prefix: "+", label: "Eventos y fiestas" },
+                    { value: 900, prefix: "+", label: "Clientes satisfechos" },
                     { value: 300, prefix: "+", label: "Bodas" },
-                    { value: 2000, prefix: "+", label: "Clientes satisfechos" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-accent">
@@ -432,11 +402,12 @@ export default function HomePage() {
         title="Anima la fiesta con MG Eventos"
         description="Habla con nosotros y te asesoraremos a la hora de elegir lo que puede animar mejor tu evento"
         primaryButton={{
-          text: "¡Contáctanos!",
+          text: "Contáctanos",
           href: "/contacto",
           icon: "arrow",
           variant: "primary",
         }}
+        primaryButtonClassName="animate-cta-button"
         secondaryButton={{
           text: "Llamar ahora",
           href: "tel:+34600000000",

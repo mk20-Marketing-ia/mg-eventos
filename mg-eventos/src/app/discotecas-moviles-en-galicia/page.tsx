@@ -34,24 +34,9 @@ export const metadata: Metadata = createMetadata({
 });
 
 const serviciosRelacionados: ServiceCardItem[] = [
-  {
-    heading: "DJ para eventos",
-    description: "Profesionalidad y adaptación para cualquier tipo de evento o celebración.",
-    href: "/dj-para-eventos-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
-  },
-  {
-    heading: "Escenario móvil",
-    description: "Estructura completa para verbenas y conciertos al aire libre en Galicia.",
-    href: "/escenario-movil-para-eventos",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20camion%20esenario.jpg",
-  },
-  {
-    heading: "Fotomatón",
-    description: "Diversión y recuerdos para todos tus invitados. Atrezzo incluido.",
-    href: "/fotomaton-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
-  },
+  { heading: "DJ para eventos", description: "", href: "/dj-para-eventos-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg" },
+  { heading: "Escenario móvil", description: "", href: "/escenario-movil-para-eventos", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20camion%20esenario.jpg" },
+  { heading: "Fotomatón", description: "", href: "/fotomaton-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg" },
 ];
 
 export default function DiscoMovilPage() {
@@ -240,13 +225,13 @@ export default function DiscoMovilPage() {
                 </div>
               </div>
 
-              {/* Combo Discomóvil + Escenario — card ancho completo */}
+              {/* Combo Discomóvil + Escenario — card ancho completo, centrado en responsive */}
               <Link
                 href="/escenario-movil-para-eventos"
-                className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2"
+                className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative flex items-center gap-5">
+                <div className="relative flex flex-col items-center gap-3 sm:flex-row sm:gap-5 w-full sm:w-auto">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
                     <Speaker className="w-6 h-6 text-white" />
                   </div>
@@ -258,7 +243,7 @@ export default function DiscoMovilPage() {
                       La combinación más completa para verbenas y conciertos. Escenario, sonido potente, iluminación y DJ en un solo servicio.
                     </p>
                   </div>
-                  <span className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all">
+                  <span className="sm:ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all">
                     Ver escenario →
                   </span>
                 </div>

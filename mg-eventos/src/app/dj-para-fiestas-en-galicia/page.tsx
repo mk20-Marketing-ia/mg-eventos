@@ -34,24 +34,9 @@ export const metadata: Metadata = createMetadata({
 });
 
 const serviciosRelacionados: ServiceCardItem[] = [
-  {
-    heading: "DJ para bodas",
-    description: "El momento más especial merece la música perfecta. Asesoramiento y lista personalizada.",
-    href: "/dj-para-bodas-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg",
-  },
-  {
-    heading: "Disco móvil",
-    description: "La fiesta donde tú quieras. Sonido de alta calidad e iluminación espectacular.",
-    href: "/discotecas-moviles-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
-  },
-  {
-    heading: "Fotomatón",
-    description: "Diversión y recuerdos únicos. Atrezzo y galería digital incluidos.",
-    href: "/fotomaton-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
-  },
+  { heading: "DJ para bodas", description: "", href: "/dj-para-bodas-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg" },
+  { heading: "Disco móvil", description: "", href: "/discotecas-moviles-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg" },
+  { heading: "Fotomatón", description: "", href: "/fotomaton-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg" },
 ];
 
 export default function DJFiestasPage() {
@@ -238,10 +223,10 @@ export default function DJFiestasPage() {
                 </div>
               </div>
 
-              {/* Reuniones y conciertos — ocupa ancho completo */}
-              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2">
+              {/* Reuniones y conciertos — ocupa ancho completo, centrado en responsive */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white/12 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative flex items-center gap-5">
+                <div className="relative flex flex-col items-center gap-3 sm:flex-row sm:gap-5 w-full sm:w-auto">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
                     <Music2 className="w-6 h-6 text-white" />
                   </div>
@@ -253,7 +238,7 @@ export default function DJFiestasPage() {
                   </div>
                   <Link
                     href="/escenario-movil-para-eventos"
-                    className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all"
+                    className="sm:ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all"
                   >
                     Ver escenario →
                   </Link>

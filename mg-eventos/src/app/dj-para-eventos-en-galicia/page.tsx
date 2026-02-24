@@ -35,24 +35,9 @@ export const metadata: Metadata = createMetadata({
 });
 
 const serviciosRelacionados: ServiceCardItem[] = [
-  {
-    heading: "Disco móvil",
-    description: "La fiesta donde tú quieras. Sonido de alta calidad e iluminación espectacular.",
-    href: "/discotecas-moviles-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
-  },
-  {
-    heading: "Pantallas LED",
-    description: "Impacto visual en cualquier evento. Tamaños y configuraciones adaptadas.",
-    href: "/pantallas-led-para-eventos-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg",
-  },
-  {
-    heading: "Fotomatón",
-    description: "Diversión y recuerdos únicos. Atrezzo y galería digital incluidos.",
-    href: "/fotomaton-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg",
-  },
+  { heading: "Disco móvil", description: "", href: "/discotecas-moviles-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg" },
+  { heading: "Pantallas LED", description: "", href: "/pantallas-led-para-eventos-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20pantallas%20led.jpg" },
+  { heading: "Fotomatón", description: "", href: "/fotomaton-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20fotomation.jpg" },
 ];
 
 export default function DJEventosPage() {
@@ -250,13 +235,13 @@ export default function DJEventosPage() {
                 </div>
               </Link>
 
-              {/* Camión escenario */}
+              {/* Camión escenario — centrado en responsive */}
               <Link
                 href="/escenario-movil-para-eventos"
-                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2"
+                className="group relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 hover:bg-white/18 hover:border-white/40 transition-all duration-300 sm:col-span-2 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative flex items-center gap-5">
+                <div className="relative flex flex-col items-center gap-3 sm:flex-row sm:gap-5 w-full sm:w-auto">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
@@ -268,7 +253,7 @@ export default function DJEventosPage() {
                       Para verbenas y conciertos al aire libre. Estructura, sonido e iluminación profesional lista para montar.
                     </p>
                   </div>
-                  <span className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all">
+                  <span className="sm:ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all">
                     Ver →
                   </span>
                 </div>

@@ -34,24 +34,9 @@ export const metadata: Metadata = createMetadata({
 });
 
 const serviciosRelacionados: ServiceCardItem[] = [
-  {
-    heading: "DJ para bodas",
-    description: "Música perfecta para cada momento de vuestro gran día. Lista personalizada.",
-    href: "/dj-para-bodas-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg",
-  },
-  {
-    heading: "Disco móvil",
-    description: "La fiesta donde tú quieras. Sonido e iluminación espectacular incluidos.",
-    href: "/discotecas-moviles-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg",
-  },
-  {
-    heading: "DJ para eventos",
-    description: "Profesionalidad y adaptación para cualquier tipo de evento o celebración.",
-    href: "/dj-para-eventos-en-galicia",
-    imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg",
-  },
+  { heading: "DJ para bodas", description: "", href: "/dj-para-bodas-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/servicio%20de%20dj%20para%20boda%20en%20galicia.jpg" },
+  { heading: "Disco móvil", description: "", href: "/discotecas-moviles-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20disco%20movil.jpg" },
+  { heading: "DJ para eventos", description: "", href: "/dj-para-eventos-en-galicia", imgSrc: "/mg%20eventos%20en%20galicia%20%20servicios/mg%20eventos%20en%20galicia%20%20servicios%20de%20dj.jpg" },
 ];
 
 export default function FotomatonPage() {
@@ -236,10 +221,10 @@ export default function FotomatonPage() {
                 </div>
               </div>
 
-              {/* Combo DJ + Fotomatón — ocupa ancho completo */}
-              <div className="relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 sm:col-span-2">
+              {/* Combo DJ + Fotomatón — ocupa ancho completo, centrado en responsive */}
+              <div className="relative overflow-hidden rounded-2xl bg-white/10 border border-white/25 p-6 sm:col-span-2 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent" />
-                <div className="relative flex items-center gap-5">
+                <div className="relative flex flex-col items-center gap-3 sm:flex-row sm:gap-5 w-full sm:w-auto">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/15 border border-white/30 flex items-center justify-center">
                     <Music className="w-6 h-6 text-white" />
                   </div>
@@ -253,7 +238,7 @@ export default function FotomatonPage() {
                   </div>
                   <Link
                     href="/contacto"
-                    className="ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 hover:text-white hover:translate-x-1 transition-all"
+                    className="sm:ml-auto flex-shrink-0 text-xs font-heading font-semibold text-white/80 hover:text-white hover:translate-x-1 transition-all"
                   >
                     Consultar →
                   </Link>
