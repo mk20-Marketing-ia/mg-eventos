@@ -117,11 +117,12 @@ export default function HomePage() {
       </ScrollExpandHero>
 
       {/* Tres pilares — fondo oscuro ambiente */}
-      <section className="relative overflow-hidden bg-primary py-16 md:py-20">
+      <section className="relative overflow-hidden bg-primary py-16 md:py-20" aria-labelledby="pilares-heading">
         {/* Halos decorativos */}
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 container mx-auto px-4">
+          <h2 id="pilares-heading" className="sr-only">Qué nos define</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
             {[
               {
@@ -160,15 +161,15 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-center min-h-[40rem]">
 
-            {/* Columna izquierda — texto */}
-            <div className="py-16 lg:py-20 lg:pr-8 text-center md:text-left">
+            {/* Columna izquierda — texto: móvil centrado, escritorio izquierda */}
+            <div className="py-16 lg:py-20 lg:pr-8 text-center lg:text-left">
               <span className="inline-block text-secondary font-heading font-semibold text-xs uppercase tracking-[0.2em] mb-4">
                 Quiénes somos
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6 text-center">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-6 text-center lg:text-left">
                 Sobre MG Eventos
               </h2>
-              <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8 text-center text-justify">
+              <p className="text-neutral-600 font-body text-lg leading-relaxed mb-8 text-center lg:text-left text-justify">
                 Cada evento tiene su propio carácter, y por eso no existe una
                 fórmula única para animarlo. Lo que sí hay es experiencia,
                 intuición y muchas ganas de pasarlo bien. En MG Eventos
@@ -238,6 +239,8 @@ export default function HomePage() {
                   "/images/imagenes%20verticales%20para%20la%20home/8.jpg",
                   "/images/imagenes%20verticales%20para%20la%20home/9.jpg",
                   "/images/imagenes%20verticales%20para%20la%20home/10.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/1.jpg",
+                  "/images/imagenes%20verticales%20para%20la%20home/2.jpg",
                 ]}
                 className="h-[42rem]"
               />
@@ -326,19 +329,19 @@ export default function HomePage() {
       <section className="w-full py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid border border-neutral-200 rounded-2xl p-8 md:p-12 lg:p-14 grid-cols-1 gap-10 items-center lg:grid-cols-2 bg-white shadow-sm">
-            {/* Columna izquierda — texto */}
+            {/* Columna izquierda — texto: móvil centrado, escritorio izquierda */}
             <div className="flex flex-col gap-8">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 items-center lg:items-start">
                 <div>
                   <Badge variant="secondary" className="mb-4">
                     Bodas
                   </Badge>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl font-heading font-bold text-neutral-900 text-center">
+                  <h2 className="text-3xl lg:text-4xl xl:text-5xl tracking-tight max-w-xl font-heading font-bold text-neutral-900 text-center lg:text-left">
                     MG Eventos es tu Animador de bodas en Galicia
                   </h2>
-                  <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl font-body text-center text-justify">
+                  <p className="text-lg leading-relaxed tracking-tight text-neutral-600 max-w-xl font-body text-center lg:text-left text-justify">
                     Las bodas son momentos únicos, y tener un animador profesional
                     marca la diferencia entre una fiesta bonita y una que se recuerda
                     toda la vida. Nuestro equipo sabe cuándo subir el ritmo, cuándo
@@ -373,10 +376,13 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
                   {[
                     { value: 1600, prefix: "+", label: "Eventos y fiestas" },
-                    { value: 900, prefix: "+", label: "Clientes satisfechos" },
+                    { value: 900, prefix: "+", label: "Clientes" },
                     { value: 300, prefix: "+", label: "Bodas" },
-                  ].map((stat) => (
-                    <div key={stat.label} className="text-center">
+                  ].map((stat, idx) => (
+                    <div
+                      key={stat.label}
+                      className={`text-center flex flex-col items-center ${idx === 2 ? "max-sm:col-span-2 max-sm:w-full" : ""}`}
+                    >
                       <p className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-accent">
                         <AnimatedCounter
                           value={stat.value}
@@ -407,7 +413,7 @@ export default function HomePage() {
           icon: "arrow",
           variant: "primary",
         }}
-        primaryButtonClassName="animate-cta-button"
+        primaryButtonClassName="cta-btn-appear"
         secondaryButton={{
           text: "Llamar ahora",
           href: "tel:+34600000000",

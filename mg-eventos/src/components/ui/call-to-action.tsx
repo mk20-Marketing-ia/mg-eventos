@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import { MoveRight, MessageCircle, PhoneCall } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -90,6 +94,10 @@ export function CallToAction({
   className,
   primaryButtonClassName,
 }: CallToActionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
+  const sectionVisibleClass = isInView ? "cta-section-visible" : "";
+
   // ── FULL WIDTH ────────────────────────────────────────────────
   if (layout === "full") {
     return (
@@ -147,7 +155,7 @@ export function CallToAction({
     : "text-neutral-500";
 
   return (
-    <section className={cn("py-16 md:py-24 bg-neutral-50", className)}>
+    <section ref={sectionRef} className={cn("py-16 md:py-24 bg-neutral-50", className, sectionVisibleClass)}>
       <div className="container mx-auto px-4">
         <div className={cn("flex flex-col items-center text-center rounded-2xl p-8 md:p-14 gap-6", cardBg)}>
           {badge && (

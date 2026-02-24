@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import Link from "next/link";
-import { motion, Variants, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export interface ServiceCardItem {
@@ -58,8 +58,7 @@ const ServiceCard = ({ heading, description, imgSrc, href, index, isInView }: Se
       <motion.div
         initial={{ y: -56, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut", staggerChildren: 0.035 }}
-        whileHover="hover"
+        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
         className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-2xl bg-slate-300"
       >
         {/* Imagen de fondo */}
@@ -80,41 +79,14 @@ const ServiceCard = ({ heading, description, imgSrc, href, index, isInView }: Se
           <ArrowRight className="ml-auto text-2xl text-white/70 transition-transform duration-500 group-hover:-rotate-45 group-hover:text-white" />
 
           <div>
-            <h4 className="font-heading font-bold text-2xl md:text-3xl mb-1">
-              {heading.split("").map((letter, index) => (
-                <AnimatedLetter letter={letter} key={index} />
-              ))}
-            </h4>
+            <h3 className="font-heading font-bold text-2xl md:text-3xl mb-1">
+              {heading}
+            </h3>
             {description ? <p className="font-body text-sm text-white/80 leading-snug">{description}</p> : null}
           </div>
         </div>
       </motion.div>
     </Link>
-  );
-};
-
-// --- AnimatedLetter ---
-interface AnimatedLetterProps {
-  letter: string;
-}
-
-const letterVariants: Variants = {
-  hover: { y: "-50%" },
-};
-
-const AnimatedLetter = ({ letter }: AnimatedLetterProps) => {
-  return (
-    <div className="inline-block h-[30px] md:h-[36px] overflow-hidden">
-      <motion.span
-        className="flex min-w-[4px] flex-col"
-        style={{ y: "0%" }}
-        variants={letterVariants}
-        transition={{ duration: 0.5 }}
-      >
-        <span>{letter}</span>
-        <span>{letter}</span>
-      </motion.span>
-    </div>
   );
 };
 
